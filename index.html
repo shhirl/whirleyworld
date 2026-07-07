@@ -3,326 +3,354 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shirley He — Welcome to Whirley World</title>
-  <meta name="description" content="Shirley He — AI product & strategy leader who builds AI things (one of them judges handstands). Data scientist at heart, community builder, perpetual traveller. Welcome to Whirley World." />
-  <meta property="og:title" content="Shirley He — Whirley World" />
-  <meta property="og:description" content="AI × aviation, things I've built, data roots, community & voice, and the whirl of travel. One orbit, five pillars." />
+  <title>Shirley He — AI Product Strategy, Built by Hand</title>
+  <meta name="description" content="Shirley He — AI Product Strategy Lead in Zürich. Principal data scientist by training, personal trainer in a former life. I build AI products and show my work." />
+  <meta property="og:title" content="Shirley He — AI Product Strategy, Built by Hand" />
+  <meta property="og:description" content="I build AI products and show my work. AI strategy from someone who still writes code." />
   <meta property="og:url" content="https://www.whirleyworld.com" />
   <meta property="og:type" content="website" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340;0,9..144,500;0,9..144,600;1,9..144,340&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #1c1b18;
+      --ink-soft: #55524a;
+      --paper: #faf8f3;
+      --paper-deep: #f2eee5;
+      --line: #e3ddcf;
+      --accent: #b8860b;      /* quiet gold */
+      --banana: #f3c623;      /* used sparingly */
+      --serif: "Fraunces", Georgia, serif;
+      --sans: "Inter", -apple-system, sans-serif;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.65;
+      font-size: 17px;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 1060px; margin: 0 auto; padding: 0 24px; }
+
+    /* ---------- nav ---------- */
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: color-mix(in srgb, var(--paper) 88%, transparent);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner {
+      display: flex; align-items: baseline; justify-content: space-between;
+      padding: 18px 24px; max-width: 1060px; margin: 0 auto;
+    }
+    .nav-name { font-family: var(--serif); font-weight: 600; font-size: 1.15rem; text-decoration: none; color: var(--ink); }
+    .nav-name span { color: var(--accent); }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { text-decoration: none; color: var(--ink-soft); font-size: 0.92rem; font-weight: 500; }
+    .nav-links a:hover { color: var(--ink); }
+
+    /* ---------- hero ---------- */
+    .hero { padding: 110px 0 90px; }
+    .eyebrow {
+      font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--accent); font-weight: 600; margin-bottom: 22px;
+    }
+    h1 {
+      font-family: var(--serif); font-weight: 500;
+      font-size: clamp(2.6rem, 6vw, 4.4rem);
+      line-height: 1.08; letter-spacing: -0.01em; max-width: 17ch;
+    }
+    h1 .mark {
+      background-image: linear-gradient(transparent 62%, color-mix(in srgb, var(--banana) 55%, transparent) 62%);
+    }
+    .hero-sub {
+      margin-top: 30px; max-width: 56ch; font-size: 1.12rem; color: var(--ink-soft);
+    }
+    .hero-sub strong { color: var(--ink); font-weight: 600; }
+    .hero-ctas { margin-top: 38px; display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn {
+      display: inline-block; text-decoration: none; font-weight: 600; font-size: 0.95rem;
+      padding: 13px 26px; border-radius: 6px; transition: transform 0.15s ease, background 0.15s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-dark { background: var(--ink); color: var(--paper); }
+    .btn-dark:hover { background: #000; }
+    .btn-line { border: 1.5px solid var(--line); color: var(--ink); background: transparent; }
+    .btn-line:hover { border-color: var(--ink-soft); }
+
+    /* ---------- credibility strip ---------- */
+    .cred { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--paper-deep); }
+    .cred-inner {
+      max-width: 1060px; margin: 0 auto; padding: 20px 24px;
+      display: flex; gap: 12px 40px; flex-wrap: wrap; align-items: baseline;
+      font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft);
+    }
+    .cred-inner b { color: var(--ink); font-weight: 600; }
+
+    /* ---------- sections ---------- */
+    section { padding: 96px 0; }
+    .sec-label {
+      font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--accent); font-weight: 600; margin-bottom: 14px;
+    }
+    h2 { font-family: var(--serif); font-weight: 500; font-size: clamp(1.9rem, 4vw, 2.7rem); line-height: 1.15; margin-bottom: 18px; }
+    .sec-intro { max-width: 58ch; color: var(--ink-soft); margin-bottom: 48px; }
+    .sec-intro em { font-family: var(--serif); color: var(--ink); }
+
+    /* ---------- builds ---------- */
+    .build-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 22px; }
+    .build-card {
+      border: 1px solid var(--line); border-radius: 10px; background: #fff;
+      padding: 30px 28px; display: flex; flex-direction: column; gap: 12px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .build-card:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(28,27,24,0.07); }
+    .build-top { display: flex; align-items: center; justify-content: space-between; }
+    .build-emoji { font-size: 1.7rem; }
+    .tag {
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 4px 10px; border-radius: 99px;
+    }
+    .tag-live { background: #e5f3e5; color: #256d2a; }
+    .tag-soon { background: var(--paper-deep); color: var(--ink-soft); }
+    .build-card h3 { font-family: var(--serif); font-weight: 600; font-size: 1.35rem; }
+    .build-card p { color: var(--ink-soft); font-size: 0.98rem; flex: 1; }
+    .build-links { display: flex; gap: 18px; font-size: 0.92rem; font-weight: 600; }
+    .build-links a { color: var(--accent); text-decoration: none; }
+    .build-links a:hover { text-decoration: underline; }
+
+    /* ---------- story ---------- */
+    .story { background: var(--ink); color: var(--paper); }
+    .story .sec-label { color: var(--banana); }
+    .story h2 { color: var(--paper); }
+    .story-cols { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: start; }
+    .story p { color: #c9c4b8; margin-bottom: 18px; max-width: 58ch; }
+    .story p strong { color: var(--paper); }
+    .pull {
+      font-family: var(--serif); font-style: italic; font-size: 1.35rem; line-height: 1.4;
+      color: var(--paper); border-left: 3px solid var(--banana); padding-left: 22px; margin-top: 26px;
+    }
+    .timeline { list-style: none; border-left: 1px solid #4a4740; }
+    .timeline li { position: relative; padding: 0 0 26px 26px; }
+    .timeline li::before {
+      content: ""; position: absolute; left: -5px; top: 8px;
+      width: 9px; height: 9px; border-radius: 50%; background: var(--banana);
+    }
+    .timeline .t-when { font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: #97927f; }
+    .timeline .t-what { font-weight: 600; color: var(--paper); }
+    .timeline .t-note { font-size: 0.92rem; color: #c9c4b8; }
+
+    /* ---------- speaking ---------- */
+    .speak-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+    .topic { border-top: 1px solid var(--line); padding: 20px 0; }
+    .topic h3 { font-family: var(--serif); font-weight: 600; font-size: 1.2rem; margin-bottom: 6px; }
+    .topic p { color: var(--ink-soft); font-size: 0.97rem; }
+    .speak-card {
+      background: var(--paper-deep); border-radius: 10px; padding: 34px 32px;
+      border: 1px solid var(--line);
+    }
+    .speak-card h3 { font-family: var(--serif); font-size: 1.4rem; font-weight: 600; margin-bottom: 12px; }
+    .speak-card p { color: var(--ink-soft); margin-bottom: 22px; }
+
+    /* ---------- contact / footer ---------- */
+    .contact { text-align: center; padding: 110px 0; }
+    .contact h2 { max-width: 22ch; margin: 0 auto 18px; }
+    .contact p { color: var(--ink-soft); max-width: 48ch; margin: 0 auto 34px; }
+    footer { border-top: 1px solid var(--line); padding: 30px 0 40px; }
+    .foot-inner {
+      max-width: 1060px; margin: 0 auto; padding: 0 24px;
+      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px;
+      font-size: 0.9rem; color: var(--ink-soft);
+    }
+    .foot-links { display: flex; gap: 22px; }
+    .foot-links a { color: var(--ink); text-decoration: none; font-weight: 500; }
+    .foot-links a:hover { color: var(--accent); }
+
+    /* ---------- reveal ---------- */
+    .reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+
+    @media (max-width: 780px) {
+      .story-cols, .speak-cols { grid-template-columns: 1fr; gap: 40px; }
+      section { padding: 70px 0; }
+      .hero { padding: 70px 0 60px; }
+      .nav-links { gap: 18px; }
+      .nav-links a:first-child { display: none; }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- grain overlay -->
-  <div class="grain" aria-hidden="true"></div>
-
-  <!-- ======================== NAV ======================== -->
-  <nav class="nav" aria-label="Main navigation">
-    <a class="nav-logo" href="#hero" aria-label="Whirley World home">
-      <svg class="logo-whirl" viewBox="0 0 40 40" aria-hidden="true">
-        <path d="M20 4 A16 16 0 1 1 4 20" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
-        <path d="M20 11 A9 9 0 1 1 11 20" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
-        <circle cx="20" cy="20" r="3" fill="currentColor"/>
-      </svg>
-      <span>whirley&nbsp;world</span>
-    </a>
-    <div class="nav-links">
-      <a href="#builds">Builds</a>
-      <a href="#pillars">Pillars</a>
-      <a href="#about">About</a>
-      <a href="#contact" class="nav-cta">Say hi</a>
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-name" href="#top">Shirley He<span>.</span></a>
+      <div class="nav-links">
+        <a href="#builds">Builds</a>
+        <a href="#story">Story</a>
+        <a href="#speaking">Speaking</a>
+        <a href="#contact">Contact</a>
+      </div>
     </div>
   </nav>
 
-  <!-- ======================== HERO ======================== -->
-  <header class="hero" id="hero">
-    <svg class="hero-spiral" viewBox="0 0 600 600" aria-hidden="true">
-      <g class="spin-slow" style="transform-origin: 300px 300px;">
-        <circle cx="300" cy="300" r="280" fill="none" stroke="var(--violet)" stroke-width="2" stroke-dasharray="4 14" opacity="0.35"/>
-        <circle cx="300" cy="300" r="210" fill="none" stroke="var(--coral)" stroke-width="2" stroke-dasharray="4 12" opacity="0.35"/>
-        <circle cx="300" cy="300" r="140" fill="none" stroke="var(--teal)" stroke-width="2" stroke-dasharray="4 10" opacity="0.35"/>
-        <circle cx="580" cy="300" r="10" fill="var(--violet)"/>
-        <circle cx="300" cy="90"  r="8"  fill="var(--coral)"/>
-        <circle cx="160" cy="300" r="6"  fill="var(--teal)"/>
-      </g>
-    </svg>
-
-    <div class="hero-inner reveal">
-      <span class="badge badge-tilt-l">📍 Zürich, Switzerland</span>
-      <h1>
-        Hi, I'm <span class="squiggle">Shirley</span>.<br/>
-        Welcome to <span class="hero-whirl-word">Whirley&nbsp;World</span>.
-      </h1>
-      <p class="hero-sub">
-        I lead <strong>AI products &amp; strategy</strong> at an airline — teaching planes-worth
-        of data to think — and I <strong>build AI things</strong> on the side.
-        One of them judges my handstands.
-      </p>
-      <p class="hero-pronounce">
-        <em>whirley</em> /ˈwɜː(r)li/ — like Shirley, set in motion.
-      </p>
-      <div class="hero-ctas">
-        <a class="btn btn-primary" href="#pillars">See what I spin&nbsp;↓</a>
-        <a class="btn btn-ghost" href="#contact">Say hi</a>
-      </div>
+  <!-- ================= HERO ================= -->
+  <header class="hero wrap" id="top">
+    <p class="eyebrow reveal">AI Product Strategy · Zürich</p>
+    <h1 class="reveal">I build AI products and <span class="mark">show my work</span>.</h1>
+    <p class="hero-sub reveal">
+      I'm Shirley He — <strong>AI Product Strategy Lead at Swiss International Air Lines</strong>,
+      principal data scientist by training, personal trainer in a former life.
+      I believe strategy written by people who've never built anything is fiction —
+      so I keep building.
+    </p>
+    <div class="hero-ctas reveal">
+      <a class="btn btn-dark" href="#builds">See the builds</a>
+      <a class="btn btn-line" href="https://www.linkedin.com/in/shhirl" target="_blank" rel="noopener">LinkedIn ↗</a>
     </div>
-
-    <span class="sticker sticker-1 badge">✈️ AI × aviation</span>
-    <span class="sticker sticker-2 badge">📊 data at heart</span>
-    <span class="sticker sticker-3 badge">🌍 EN · DE · 中文</span>
   </header>
 
-  <!-- ======================== MARQUEE ======================== -->
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee-track">
-      <span>AI × AVIATION ✦ THINGS I'VE BUILT ✦ DATA ROOTS ✦ COMMUNITY &amp; VOICE ✦ THE WHIRL ✦ ZÜRICH ✦ </span>
-      <span>AI × AVIATION ✦ THINGS I'VE BUILT ✦ DATA ROOTS ✦ COMMUNITY &amp; VOICE ✦ THE WHIRL ✦ ZÜRICH ✦ </span>
+  <!-- ================= CREDIBILITY ================= -->
+  <div class="cred">
+    <div class="cred-inner">
+      <span><b>SWISS</b> Int'l Air Lines</span>
+      <span><b>Lufthansa Group</b> · zeroG</span>
+      <span><b>WiDS Zürich</b> organizing committee</span>
+      <span><b>Barcelona GSE</b> MSc Data Science</span>
+      <span><b>Berlin Marathon</b> 2025</span>
     </div>
   </div>
 
-  <!-- ======================== PILLARS ======================== -->
-  <main id="pillars">
-    <div class="section-head reveal">
-      <h2>What I spin</h2>
-      <p>Five pillars, one orbit.</p>
-    </div>
-
-    <!-- 01 · AI × Aviation -->
-    <section class="pillar pillar-coral" id="ai-aviation">
-      <div class="pillar-inner reveal">
-        <div class="pillar-label">
-          <span class="pillar-num">01</span>
-          <span class="badge badge-tilt-r">day job, dream job</span>
-        </div>
-        <h3>AI × Aviation</h3>
-        <p class="pillar-lede">
-          I lead AI products and strategy at <strong>Swiss International Air Lines</strong>,
-          transforming how customers experience air travel. My favourite kind of problem:
-          taking something as complex as an airline and making it feel effortless.
-        </p>
-        <div class="card-row">
-          <div class="card">
-            <span class="card-emoji">🧭</span>
-            <h4>Strategy</h4>
-            <p>Charting where AI genuinely moves the needle for travellers — and where it's just turbulence.</p>
-          </div>
-          <div class="card">
-            <span class="card-emoji">🛠️</span>
-            <h4>Products</h4>
-            <p>From idea to boarding: shipping AI-powered experiences into the hands of millions of passengers.</p>
-          </div>
-          <div class="card">
-            <span class="card-emoji">🤝</span>
-            <h4>People</h4>
-            <p>Bringing crews, engineers, and executives into the same flight plan for AI.</p>
-          </div>
+  <!-- ================= BUILDS ================= -->
+  <section class="wrap" id="builds">
+    <p class="sec-label reveal">Things I've built</p>
+    <h2 class="reveal">Strategy you can click.</h2>
+    <p class="sec-intro reveal">
+      Small, real, occasionally ridiculous — every build keeps me honest about what AI
+      can actually do: <em>the gap between the demo and the product, what breaks, what it costs.</em>
+    </p>
+    <div class="build-grid">
+      <div class="build-card reveal">
+        <div class="build-top"><span class="build-emoji">🍌</span><span class="tag tag-live">Live</span></div>
+        <h3>fixmybanana</h3>
+        <p>An AI coach that looks at your handstand photo, finds your spine, and tells you exactly
+           how much of a banana you are. It gave its own creator 6.8/10 — no loyalty whatsoever.</p>
+        <div class="build-links">
+          <a href="https://www.fixmybanana.com" target="_blank" rel="noopener">Try it ↗</a>
+          <a href="https://github.com/shhirl/fixmybanana" target="_blank" rel="noopener">Source ↗</a>
         </div>
       </div>
-    </section>
-
-    <!-- 02 · Things I've built -->
-    <section class="pillar pillar-banana" id="builds">
-      <div class="pillar-inner reveal">
-        <div class="pillar-label">
-          <span class="pillar-num">02</span>
-          <span class="badge badge-tilt-l">strategy you can click</span>
-        </div>
-        <h3>Things I've built</h3>
-        <p class="pillar-lede">
-          I believe AI strategy written by people who've never built anything is fiction.
-          So I keep building — small, real, slightly ridiculous.
-        </p>
-        <div class="card-row">
-          <div class="card">
-            <span class="card-emoji">🍌</span>
-            <h4>fixmybanana</h4>
-            <p>An AI coach that looks at your handstand photo, finds your spine, and tells you
-            exactly how much of a banana you are. Free, and brutally honest — it gave its own
-            creator 6.8/10.</p>
-          </div>
-          <div class="card">
-            <span class="card-emoji">🌀</span>
-            <h4>Next up</h4>
-            <p>Something for everyone in Switzerland who fears the official A4 envelope.
-            Spinning up now — follow along to watch it break first.</p>
-          </div>
-        </div>
-        <a class="btn btn-outline" href="https://www.fixmybanana.com" target="_blank" rel="noopener">
-          Get your handstand judged&nbsp;↗
-        </a>
-      </div>
-    </section>
-
-    <!-- 03 · Data roots -->
-    <section class="pillar pillar-violet" id="data-roots">
-      <div class="pillar-inner reveal">
-        <div class="pillar-label">
-          <span class="pillar-num">03</span>
-          <span class="badge badge-tilt-l">the craft underneath</span>
-        </div>
-        <h3>Data roots</h3>
-        <p class="pillar-lede">
-          Before the strategy decks came the notebooks. I trained as a data scientist —
-          Barcelona Graduate School of Economics — and I still think in distributions.
-        </p>
-        <div class="chip-cloud">
-          <span class="chip">econometrics</span>
-          <span class="chip">time series · ARMA · GARCH</span>
-          <span class="chip">machine learning for finance</span>
-          <span class="chip">statistical modelling</span>
-          <span class="chip">Python</span>
-          <span class="chip">data warehousing</span>
-        </div>
-        <a class="btn btn-outline" href="https://github.com/shhirl" target="_blank" rel="noopener">
-          Browse the notebooks on GitHub&nbsp;↗
-        </a>
-      </div>
-    </section>
-
-    <!-- 04 · Community & voice -->
-    <section class="pillar pillar-teal" id="community">
-      <div class="pillar-inner reveal">
-        <div class="pillar-label">
-          <span class="pillar-num">04</span>
-          <span class="badge badge-tilt-r">paying it forward</span>
-        </div>
-        <h3>Community &amp; voice</h3>
-        <p class="pillar-lede">
-          The best thing about data and AI is the people you get to spin up along the way.
-        </p>
-        <div class="card-row">
-          <div class="card">
-            <span class="card-emoji">👩‍💻</span>
-            <h4>WiDS Zürich</h4>
-            <p>On the organizing committee for Women in Data Science Zürich — sponsorships and community building.</p>
-          </div>
-          <div class="card">
-            <span class="card-emoji">🧒</span>
-            <h4>CoderDojo mentor</h4>
-            <p>Taught HTML and Python to kids aged 7–17. If a seven-year-old can't follow your explanation, it isn't finished.</p>
-          </div>
-          <div class="card">
-            <span class="card-emoji">🎤</span>
-            <h4>Talks &amp; panels</h4>
-            <p>On AI product strategy, AI in aviation, and reinventing your career into data &amp; AI.
-            Invite me — I'll bring the energy.</p>
-          </div>
+      <div class="build-card reveal">
+        <div class="build-top"><span class="build-emoji">✉️</span><span class="tag tag-soon">In the workshop</span></div>
+        <h3>Bürokratie Buddy</h3>
+        <p>For everyone in Switzerland who fears the official A4 envelope: an AI that reads
+           the bureaucracy letter first and explains it in plain English.</p>
+        <div class="build-links">
+          <a href="https://www.instagram.com/shirleywhirlhe" target="_blank" rel="noopener">Follow the build ↗</a>
         </div>
       </div>
-    </section>
-
-    <!-- 05 · The Whirl -->
-    <section class="pillar pillar-tangerine" id="the-whirl">
-      <div class="pillar-inner reveal">
-        <div class="pillar-label">
-          <span class="pillar-num">05</span>
-          <span class="badge badge-tilt-l">off duty</span>
+      <div class="build-card reveal">
+        <div class="build-top"><span class="build-emoji">🌏</span><span class="tag tag-soon">Next</span></div>
+        <h3>Relocation agent</h3>
+        <p>Zürich, Singapore, or the US? An AI research agent doing the spreadsheet-crying
+           about visas, salaries, and where an AI career compounds fastest.</p>
+        <div class="build-links">
+          <a href="https://github.com/shhirl" target="_blank" rel="noopener">GitHub ↗</a>
         </div>
-        <h3>The Whirl</h3>
-        <p class="pillar-lede">
-          Working for an airline is dangerous for someone who loves to travel.
-          London → Barcelona → Zürich so far; the rest of the map is a to-do list.
-        </p>
-        <div class="polaroids">
-          <figure class="polaroid tilt-l">
-            <div class="polaroid-img ph-1"><span>🗺️</span></div>
-            <figcaption>somewhere new</figcaption>
-          </figure>
-          <figure class="polaroid tilt-r">
-            <div class="polaroid-img ph-2"><span>🏔️</span></div>
-            <figcaption>weekend altitude</figcaption>
-          </figure>
-          <figure class="polaroid tilt-l2">
-            <div class="polaroid-img ph-3"><span>✈️</span></div>
-            <figcaption>window seat, always</figcaption>
-          </figure>
-        </div>
-        <a class="btn btn-outline" href="https://www.instagram.com/shirleywhirlhe" target="_blank" rel="noopener">
-          Follow the whirl on Instagram&nbsp;↗
-        </a>
-      </div>
-    </section>
-
-    <!-- ======================== ABOUT ======================== -->
-    <section class="about" id="about">
-      <div class="about-inner reveal">
-        <div class="about-avatar" aria-hidden="true">
-          <svg viewBox="0 0 200 200">
-            <g class="spin-slow" style="transform-origin: 100px 100px;">
-              <circle cx="100" cy="100" r="92" fill="none" stroke="var(--coral)" stroke-width="5" stroke-dasharray="10 16" stroke-linecap="round"/>
-            </g>
-            <circle cx="100" cy="100" r="70" fill="var(--violet)"/>
-            <text x="100" y="118" text-anchor="middle" font-size="52">👋</text>
-          </svg>
-        </div>
-        <div class="about-text">
-          <h2>About me</h2>
-          <p>
-            I'm Shirley He — an AI product and strategy leader living in Zürich.
-            My first career was personal training in a London gym. My second started with
-            a data science master's in Barcelona (econometrics, machine learning, more GARCH
-            models than anyone needs) and five years in the engine room — models, pipelines,
-            cloud migrations. I grew into the part I love most: turning technical possibility
-            into products people actually feel.
-          </p>
-          <p>
-            These days that means leading AI at <strong>SWISS</strong>. Outside of it, I help run
-            <strong>WiDS Zürich</strong>, mentor whenever I can, and collect boarding passes.
-            I work in English, German, and Chinese — and in spreadsheets, fluently.
-          </p>
-          <div class="chip-cloud">
-            <span class="chip">🇬🇧 English — native</span>
-            <span class="chip">🇩🇪 Deutsch</span>
-            <span class="chip">🇨🇳 中文</span>
-          </div>
-          <div class="about-links">
-            <a href="https://www.linkedin.com/in/shhirl" target="_blank" rel="noopener">LinkedIn ↗</a>
-            <a href="https://github.com/shhirl" target="_blank" rel="noopener">GitHub ↗</a>
-            <a href="https://www.instagram.com/shirleywhirlhe" target="_blank" rel="noopener">Instagram ↗</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ======================== CONTACT ======================== -->
-    <section class="contact" id="contact">
-      <div class="contact-inner reveal">
-        <h2>Give me a whirl</h2>
-        <p>
-          Talks, panels, AI × aviation ideas, WiDS things, or a good coffee spot in Zürich —
-          my inbox is an open door.
-        </p>
-        <button class="btn btn-primary btn-copy" id="copy-email" data-email="shirley.he09@gmail.com">
-          📋 Copy my e-mail
-        </button>
-        <p class="contact-alt">
-          or find me on <a href="https://www.linkedin.com/in/shhirl" target="_blank" rel="noopener">LinkedIn</a> —
-          usually the fastest runway.
-        </p>
-      </div>
-    </section>
-  </main>
-
-  <!-- ======================== FOOTER ======================== -->
-  <footer class="footer">
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee-track marquee-reverse">
-        <span>MADE IN ZÜRICH ✦ POWERED BY CURIOSITY ✦ WINDOW SEAT ONLY ✦ KEEP SPINNING ✦ </span>
-        <span>MADE IN ZÜRICH ✦ POWERED BY CURIOSITY ✦ WINDOW SEAT ONLY ✦ KEEP SPINNING ✦ </span>
       </div>
     </div>
-    <div class="footer-inner">
-      <p>© 2026 Shirley He · <a href="https://github.com/shhirl/whirleyworld" target="_blank" rel="noopener">view source ↗</a></p>
-      <p class="footer-spin">🌀 you've reached the end of the whirl</p>
+  </section>
+
+  <!-- ================= STORY ================= -->
+  <section class="story" id="story">
+    <div class="wrap story-cols">
+      <div>
+        <p class="sec-label reveal">The story</p>
+        <h2 class="reveal">Reinvention is my home turf.</h2>
+        <p class="reveal">
+          My first career was teaching people to squat properly in a London gym. My second started
+          with a data science master's in Barcelona and <strong>five years in the engine room</strong> —
+          machine learning models, data platforms, cloud migrations across an airline group.
+        </p>
+        <p class="reveal">
+          Now I lead AI product strategy at SWISS: deciding where AI genuinely moves the needle,
+          and shipping it. The engine-room years are why the strategy holds —
+          <strong>I know which promises the technology can keep.</strong>
+        </p>
+        <p class="pull reveal">Nobody is coming to save you. Nobody owes you anything.
+        I decided this early — it made everything simpler.</p>
+      </div>
+      <ul class="timeline reveal">
+        <li><span class="t-when">London</span><br/><span class="t-what">Personal trainer</span><br/><span class="t-note">BSc Economics. Loved the gym more.</span></li>
+        <li><span class="t-when">Barcelona</span><br/><span class="t-what">MSc Data Science</span><br/><span class="t-note">Barcelona GSE — starting from close to zero.</span></li>
+        <li><span class="t-when">Zürich</span><br/><span class="t-what">The engine room</span><br/><span class="t-note">5 years: ML, data platforms, cloud migration — Lufthansa Group's AI unit.</span></li>
+        <li><span class="t-when">Zürich</span><br/><span class="t-what">Principal Data Scientist</span><br/><span class="t-note">The craft, at depth.</span></li>
+        <li><span class="t-when">Now</span><br/><span class="t-what">AI Product Strategy Lead, SWISS</span><br/><span class="t-note">Strategy that ships.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= SPEAKING ================= -->
+  <section class="wrap" id="speaking">
+    <p class="sec-label reveal">Speaking &amp; community</p>
+    <h2 class="reveal">Put me on a stage.</h2>
+    <div class="speak-cols">
+      <div>
+        <div class="topic reveal">
+          <h3>AI product strategy that ships</h3>
+          <p>Beyond the hype-deck: how five years of building translates into strategy a leadership team can act on.</p>
+        </div>
+        <div class="topic reveal">
+          <h3>AI × aviation</h3>
+          <p>What it takes to bring AI into one of the world's most complex, regulated customer experiences.</p>
+        </div>
+        <div class="topic reveal">
+          <h3>Reinventing into the AI era</h3>
+          <p>Personal trainer → principal data scientist → AI product leader. The honest playbook for career pivots.</p>
+        </div>
+      </div>
+      <div class="speak-card reveal">
+        <h3>Also found at</h3>
+        <p><strong>WiDS Zürich</strong> — organizing committee for Women in Data Science Zürich.
+           Previously: CoderDojo mentor, teaching code to kids aged 7–17. If a seven-year-old
+           can't follow your explanation, it isn't finished.</p>
+        <a class="btn btn-dark" href="#contact">Invite me to speak</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="contact wrap" id="contact">
+    <p class="sec-label reveal">Contact</p>
+    <h2 class="reveal">Talks, panels, AI product ideas — or a good coffee spot in Zürich.</h2>
+    <p class="reveal">Fastest runway is LinkedIn; email works too.</p>
+    <div class="hero-ctas reveal" style="justify-content:center;">
+      <a class="btn btn-dark" href="mailto:shirley.he09@gmail.com">Email me</a>
+      <a class="btn btn-line" href="https://www.linkedin.com/in/shhirl" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="foot-inner">
+      <span>© 2026 Shirley He · Zürich · built by hand, obviously</span>
+      <div class="foot-links">
+        <a href="https://www.linkedin.com/in/shhirl" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/shhirl" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.instagram.com/shirleywhirlhe" target="_blank" rel="noopener">Instagram</a>
+      </div>
     </div>
   </footer>
 
-  <div class="toast" id="toast" role="status" aria-live="polite">Copied! 🎉</div>
-
-  <script src="main.js"></script>
+  <script>
+    const io = new IntersectionObserver(
+      entries => entries.forEach(e => e.isIntersecting && e.target.classList.add("in")),
+      { threshold: 0.12 }
+    );
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
 </body>
 </html>
