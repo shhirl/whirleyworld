@@ -103,6 +103,13 @@ a { color: inherit; }
 }
 .nav-links a.nav-cta:hover { background: var(--coral); }
 
+@media (max-width: 560px) {
+  .nav { gap: 8px; padding: 8px 10px 8px 12px; max-width: calc(100vw - 20px); }
+  .nav-logo span { display: none; }
+  .nav-links { gap: 2px; }
+  .nav-links a { padding: 6px 11px; font-size: 0.9rem; }
+}
+
 /* ---------- buttons & badges ---------- */
 .btn {
   display: inline-block;
