@@ -476,3 +476,25 @@ a { color: inherit; }
 .footer-social { display: flex; gap: 18px; align-items: center; }
 .footer-social a { color: inherit; opacity: 0.85; transition: opacity 0.2s ease, transform 0.2s ease; }
 .footer-social a:hover { opacity: 1; transform: translateY(-2px) rotate(-4deg); color: var(--coral); }
+
+/* ---- credibility strip ---- */
+.cred-strip {
+  display: flex; flex-wrap: wrap; gap: 14px;
+  justify-content: center; align-items: center;
+  padding: 26px 24px 34px;
+}
+
+/* ---- real photos: about avatar + polaroids ---- */
+.about-avatar { position: relative; }
+.avatar-photo {
+  position: absolute; inset: 15%;
+  width: 70%; height: 70%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.polaroid-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}
