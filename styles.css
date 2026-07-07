@@ -465,3 +465,7 @@ a { color: inherit; }
   .spin-slow, .marquee-track, .hero-whirl-word, .sticker, .footer-spin { animation: none !important; }
   .reveal { opacity: 1; transform: none; transition: none; }
 }
+
+/* ---- pillar 02: things I've built (banana) ---- */
+.pillar-banana    { background: #fff6d6; }
+.pillar-banana h3 { color: #c99700; }
