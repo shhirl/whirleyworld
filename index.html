@@ -51,6 +51,12 @@
       </g>
     </svg>
 
+    <div class="hero-orbit" aria-hidden="true">
+      <div class="orbit-arm">
+        <img class="orbit-photo" src="assets/shirley-portrait.jpg" alt="" />
+      </div>
+    </div>
+
     <div class="hero-inner reveal">
       <span class="badge badge-tilt-l">📍 Zürich, Switzerland</span>
       <h1>
@@ -232,13 +238,14 @@
     <!-- ======================== ABOUT ======================== -->
     <section class="about" id="about">
       <div class="about-inner reveal">
-        <div class="about-avatar">
-          <svg viewBox="0 0 200 200" aria-hidden="true">
+        <div class="about-avatar" aria-hidden="true">
+          <svg viewBox="0 0 200 200">
             <g class="spin-slow" style="transform-origin: 100px 100px;">
               <circle cx="100" cy="100" r="92" fill="none" stroke="var(--coral)" stroke-width="5" stroke-dasharray="10 16" stroke-linecap="round"/>
             </g>
+            <circle cx="100" cy="100" r="70" fill="var(--violet)"/>
+            <text x="100" y="118" text-anchor="middle" font-size="52">👋</text>
           </svg>
-          <img class="avatar-photo" src="assets/shirley-portrait.jpg" alt="Shirley He" />
         </div>
         <div class="about-text">
           <h2>About me</h2>
