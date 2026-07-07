@@ -469,3 +469,10 @@ a { color: inherit; }
 /* ---- pillar 02: things I've built (banana) ---- */
 .pillar-banana    { background: #fff6d6; }
 .pillar-banana h3 { color: #c99700; }
+
+/* ---- social icon links ---- */
+.social-icon { width: 20px; height: 20px; display: block; }
+.about-links .social-link { display: inline-flex; align-items: center; gap: 8px; }
+.footer-social { display: flex; gap: 18px; align-items: center; }
+.footer-social a { color: inherit; opacity: 0.85; transition: opacity 0.2s ease, transform 0.2s ease; }
+.footer-social a:hover { opacity: 1; transform: translateY(-2px) rotate(-4deg); color: var(--coral); }
