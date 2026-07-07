@@ -26,6 +26,12 @@ assets/       — favicon & images
 CNAME         — custom domain for GitHub Pages
 ```
 
+## Docs
+
+- [docs/DESIGN.md](docs/DESIGN.md) — the full design brief: concept, structure, colors, type, motion rules
+- [docs/REPLICATION.md](docs/REPLICATION.md) — how this was made, step by step, with a ready-to-paste prompt to replicate it with any AI
+- [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) — GitHub Pages + Cloudflare DNS setup and verification
+
 ## Run locally
 
 No tooling needed:
