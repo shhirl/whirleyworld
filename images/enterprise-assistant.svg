@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <radialGradient id="g1" cx="15%" cy="10%" r="70%"><stop offset="0" stop-color="#f3dcfb"/><stop offset="1" stop-color="#c7deff" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="800" height="500" fill="#c7deff"/><rect width="800" height="500" fill="url(#g1)"/>
+  <g fill="none" stroke="#1f1c24" stroke-width="3" stroke-linecap="round">
+    <path d="M400 250 L220 130 M400 250 L580 130 M400 250 L220 370 M400 250 L580 370" stroke-dasharray="2 10"/>
+  </g>
+  <g stroke="#1f1c24" stroke-width="3">
+    <circle cx="400" cy="250" r="78" fill="#fffaf4"/>
+    <rect x="150" y="95" width="140" height="70" rx="35" fill="#f9b286"/>
+    <rect x="510" y="95" width="140" height="70" rx="35" fill="#e5ef93"/>
+    <rect x="150" y="335" width="140" height="70" rx="35" fill="#f3dcfb"/>
+    <rect x="510" y="335" width="140" height="70" rx="35" fill="#fffaf4"/>
+  </g>
+  <g font-family="DM Sans, sans-serif" font-size="20" font-weight="700" fill="#1f1c24" text-anchor="middle">
+    <text x="400" y="257">orchestrator</text>
+    <text x="220" y="137">loyalty</text>
+    <text x="580" y="137">status</text>
+    <text x="220" y="377">FAQ</text>
+    <text x="580" y="377">safety check</text>
+  </g>
+</svg>

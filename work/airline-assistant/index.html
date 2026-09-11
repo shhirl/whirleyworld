@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Airline AI assistant · Shirley He</title>
+  <meta name="description" content="Enterprise case study: turning an airline chat assistant into an agent-based travel companion, with loyalty built in.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+<!-- =========================================================
+     ENTERPRISE CASE STUDY (anonymised)
+     Keep it anonymised: no internal numbers, dates, team
+     names or roadmap details. Check with your manager before
+     adding any metric.
+     ========================================================= -->
+
+<header class="wrap nav">
+  <a class="logo" href="../../">Shirley He</a>
+  <nav class="nav-links">
+    <a href="../../#work">Work</a>
+    <a href="../../#about">About</a>
+    <a class="btn btn-dark btn-small" href="../../#contact">Get in touch</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- ---------- HEADER BLOCK ---------- -->
+<section class="wrap">
+  <a class="back" href="../../#work">← All work</a>
+
+  <div class="block grad-blue cs-hero">
+    <p class="eyebrow">Case study 01 · Enterprise · anonymised</p>
+    <h1>Airline AI assistant</h1>
+    <p class="lead">A customer chat assistant at a European airline group, growing from answering questions into a travel companion that knows who you are and can act for you. I lead the AI product work on the loyalty and personalisation side.</p>
+
+    <dl class="meta">
+      <div><dt>Role</dt><dd>AI product lead</dd></div>
+      <div><dt>Scope</dt><dd>Strategy, architecture, cross-team alignment</dd></div>
+      <div><dt>Status</dt><dd>Ongoing</dd></div>
+      <div><dt>Note</dt><dd>Anonymised, numbers stay internal</dd></div>
+    </dl>
+  </div>
+
+  <div class="cs-image"><img src="../../images/enterprise-assistant.svg" alt="Illustration: an orchestrator routing to loyalty, status, FAQ and safety-check agents"></div>
+</section>
+
+
+<section class="wrap steps">
+
+<!-- ---------- 01 BACKGROUND ---------- -->
+  <div class="step">
+    <div>
+      <span class="step-num">01</span>
+      <h3>Background</h3>
+    </div>
+    <div class="step-body">
+      <p>Airline chat assistants are good at answering questions. What customers increasingly expect is an assistant that recognises them and does things for them: knows their status, explains their miles, guides them through a trip.</p>
+      <p>That knowledge sits in different systems owned by different teams, and the loyalty side had never operated in a conversational channel at all. Bolting features onto one chatbot doesn't scale past the first few.</p>
+    </div>
+  </div>
+
+<!-- ---------- 02 SOLUTION ---------- -->
+  <div class="step">
+    <div>
+      <span class="step-num">02</span>
+      <h3>Solution</h3>
+    </div>
+    <div class="step-body">
+      <p>Move from one chatbot to an orchestration layer that routes each request to specialist agents, each owned by the team that owns the data.</p>
+      <ul>
+        <li><strong>Loyalty becomes an agent,</strong> not a feature. The assistant calls it the same way it calls any other capability.</li>
+        <li><strong>Customer signals get a shared interface (MCP),</strong> so any team's agent can use them, not just ours.</li>
+        <li><strong>Capabilities go in by risk:</strong> the most clearly defined first, open-ended questions stay in discovery, recommendations wait until the basics work.</li>
+      </ul>
+    </div>
+  </div>
+
+<!-- ---------- 03 RECEIPTS ---------- -->
+  <div class="step">
+    <div>
+      <span class="step-num">03</span>
+      <h3>Receipts</h3>
+    </div>
+    <div class="step-body">
+      <p>The numbers stay internal. What I can show is the reasoning behind the calls I made.</p>
+      <div class="stats">
+        <div class="stat stat-text grad-peach"><strong>Sequence by risk, not excitement</strong><span>The first capability is the one that's easiest to define and test. Recommendations are the most exciting and the easiest to get wrong, so they wait.</span></div>
+        <div class="stat stat-text grad-lilac"><strong>Test a prototype, not a hypothetical</strong><span>Asking people what they'd want from an assistant tells you little. Watching them use one tells you a lot.</span></div>
+        <div class="stat stat-text grad-lime"><strong>Build once, reuse everywhere</strong><span>A shared signal layer costs more up front and saves every other team from building its own.</span></div>
+        <div class="stat stat-text grad-blue"><strong>Say no out loud</strong><span>Deprioritising a capability is a decision, so it gets written down with the reason, not quietly dropped.</span></div>
+      </div>
+    </div>
+  </div>
+
+<!-- ---------- 04 WHAT'S NEXT ---------- -->
+  <div class="step">
+    <div>
+      <span class="step-num">04</span>
+      <h3>What's next</h3>
+    </div>
+    <div class="step-body">
+      <ul>
+        <li>User research with a working prototype in customers' hands.</li>
+        <li>More teams plugging their agents into the same orchestration layer.</li>
+        <li>An idea I'm exploring: proactive guidance for people who fly rarely and need help most.</li>
+      </ul>
+      <!-- EDIT: add a "What I'd do differently" paragraph here in your own words -->
+    </div>
+  </div>
+</section>
+
+
+<!-- ---------- NEXT PROJECT ---------- -->
+<section class="wrap section">
+  <a class="block grad-lilac next" href="../ragpatterns/">
+    <div>
+      <p class="eyebrow">Next project</p>
+      <h2>ragpatterns</h2>
+    </div>
+    <span class="btn btn-dark">Read it →</span>
+  </a>
+</section>
+
+</main>
+
+<footer class="wrap footer">
+  <span>© 2026 Shirley He · Zurich</span>
+  <a href="mailto:shirleyishuman@gmail.com">shirleyishuman@gmail.com</a>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>fixmybanana · Shirley He</title>
+  <meta name="description" content="A joke handstand app with a serious eval behind it.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+<!-- =========================================================
+     CASE STUDY TEMPLATE
+     To make a new project page: copy this whole folder
+     (work/fixmybanana) to work/your-project and edit the text.
+     Numbers below come from fixmybanana.com/how-its-built.
+     ========================================================= -->
+
+<header class="wrap nav">
+  <a class="logo" href="../../">Shirley He</a>
+  <nav class="nav-links">
+    <a href="../../#work">Work</a>
+    <a href="../../#about">About</a>
+    <a class="btn btn-dark btn-small" href="../../#contact">Get in touch</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- ---------- HEADER BLOCK ---------- -->
+<section class="wrap">
+  <a class="back" href="../../#work">← All work</a>
+
+  <div class="block grad-lime cs-hero">
+    <p class="eyebrow">Case study 04 · Side project</p>
+    <h1>fixmybanana</h1>
+    <p class="lead">Upload a handstand photo and a vision model tells you whether you have good form or a banana back, the arched spine every beginner has. I built it as a joke, then used it to show how I test an AI feature before I trust it.</p>
+
+    <!-- EDIT: links to the live project -->
+    <div class="cs-actions">
+      <a class="btn btn-dark" href="https://www.fixmybanana.com">Try fixmybanana ↗</a>
+      <a class="btn btn-light" href="https://www.fixmybanana.com/how-its-built">Full lab notebook ↗</a>
+    </div>
+
+    <!-- EDIT: the four facts under the title -->
+    <dl class="meta">
+      <div><dt>Role</dt><dd>Solo: idea, build, labels, eval</dd></div>
+      <div><dt>Stack</dt><dd>gpt-4o, Railway, Cloudflare</dd></div>
+      <div><dt>Status</dt><dd>Live · v0 measured, v1 designed</dd></div>
+      <div><dt>Cost</dt><dd>$0.005 per analysis</dd></div>
+    </dl>
+  </div>
+
+  <!-- EDIT: main image. Swap for a real screenshot of the app. -->
+  <div class="cs-image"><img src="../../images/fixmybanana.svg" alt="Illustration: good form or banana back"></div>
+</section>
+
+
+<section class="wrap steps">
+
+<!-- ---------- 01 BACKGROUND ---------- -->
+  <div class="step">
+    <div>
+      <span class="step-num">01</span>
+      <h3>Background</h3>
+    </div>
+    <div class="step-body">
+      <p>fixmybanana started as a fun one. It worked, people laughed, and it proved almost nothing: from the outside it read as photo in, API call, answer out.</p>
+      <p>As a former personal trainer I can judge a handstand myself, which makes this a rare side project where I am the domain expert. So the real question became: does the model agree with me, how often, and where does it fail?</p>
+    </div>
+  </div>
+
+<!-- ---------- 02 SOLUTION ---------- -->
+  <div class="step">
+    <div>
+      <span class="step-num">02</span>
+      <h3>Solution</h3>
+    </div>
+    <div class="step-body">
+      <p>Instead of rewriting it, I froze the original as v0 and measured it on a fixed test set. Every later version runs against the same photos, so changes show up as numbers, not impressions.</p>
+      <ul>
+        <li><strong>The test set covers the edges, not the average upload:</strong> side, front and back views, freestanding and wall, dark and low-resolution photos, plus 7 non-handstand controls.</li>
+        <li><strong>I labelled every handstand</strong> on a 0 to 10 scale (0 is a ruler, 10 is a croissant), then a second labeller (Claude) scored the same set independently with the same rule.</li>
+        <li><strong>Every photo ran 5 times,</strong> because the same photo doesn't always get the same answer.</li>
+      </ul>
+    </div>
+  </div>
+
+<!-- ---------- 03 RECEIPTS ---------- -->
+  <div class="step">
+    <div>
+      <span class="step-num">03</span>
+      <h3>Receipts</h3>
+    </div>
+    <div class="step-body">
+      <!-- EDIT: update these when a new version is measured -->
+      <div class="stats">
+        <div class="stat grad-peach"><strong>54</strong><span>photos in the fixed test set: 47 handstands, 7 controls</span></div>
+        <div class="stat grad-lilac"><strong>60%</strong><span>of photos where v0 agrees with my label (majority of 5 runs, 28 of 47)</span></div>
+        <div class="stat grad-blue"><strong>83%</strong><span>of photos get the same answer on all 5 runs</span></div>
+        <div class="stat grad-lime"><strong>66%</strong><span>agreement between my labels and an independent second labeller (Claude), the realistic ceiling for any model</span></div>
+      </div>
+      <p>What failed, in order of size:</p>
+      <ul>
+        <li>42 of 235 runs returned neither label. The model refused, and the app showed the refusal as broken text.</li>
+        <li>Front and back views: only 4 of 12 came out right.</li>
+        <li>Controls: six of seven were refused, the right instinct shown as a broken message. A bronze statue of a handstand was called banana back five times out of five.</li>
+        <li>Temperature 0 still wobbled on 17% of photos.</li>
+      </ul>
+      <p class="note">60% on 47 photos has a 95% interval of roughly 45 to 72%. I publish it anyway: a number with its uncertainty is more useful than a clean score.</p>
+    </div>
+  </div>
+
+<!-- ---------- 04 WHAT'S NEXT ---------- -->
+  <div class="step">
+    <div>
+      <span class="step-num">04</span>
+      <h3>Not done yet</h3>
+    </div>
+    <div class="step-body">
+      <p>What v1 and later versions change, each measured on the same 54 photos:</p>
+      <ul>
+        <li>Give the model a way out: structured output with a "photo not usable" option, so refusals stop looking like bugs.</li>
+        <li>Replace the yes or no verdict with a 0 to 10 score.</li>
+        <li>Teach the prompt about the failure cases found above.</li>
+        <li>Add a third run only when the first two disagree. About a cent more, on borderline photos only.</li>
+        <li>A pose-estimation baseline on the same set, to check whether this needs a language model at all.</li>
+        <li>Monitoring on real traffic, behind a hard daily spending cap.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- ---------- NEXT PROJECT ---------- -->
+<section class="wrap section">
+  <a class="block grad-blue next" href="../airline-assistant/">
+    <div>
+      <p class="eyebrow">Next project</p>
+      <h2>Airline AI assistant</h2>
+    </div>
+    <span class="btn btn-dark">Read it →</span>
+  </a>
+</section>
+
+</main>
+
+<footer class="wrap footer">
+  <span>© 2026 Shirley He · Zurich</span>
+  <a href="mailto:shirleyishuman@gmail.com">shirleyishuman@gmail.com</a>
+</footer>
+
+</body>
+</html>
