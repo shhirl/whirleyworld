@@ -16,7 +16,7 @@
     <text x="340" y="250" font-size="18">passport</text>
     <text x="560" y="355" font-size="18">security</text>
   </g>
-  <g transform="translate(560 70)">
+  <g transform="translate(560 88)">
     <rect x="-80" y="-30" width="160" height="60" rx="30" fill="#fffaf4" stroke="#1f1c24" stroke-width="3"/>
     <text x="0" y="10" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-style="italic" font-size="28" fill="#1f1c24">tight!</text>
   </g>
