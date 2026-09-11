@@ -2,6 +2,18 @@
 
 One entry per release of www.whirleyworld.com. Newest first.
 
+## v2.15 · 11 September 2026 · copy polish
+
+- Editorial pass across the homepage and two case studies. Visible homepage copy is down from 777 to 668 words, a 14% cut. Nothing was deleted from the site, only from the second and third place it already appeared.
+- **Hero credentials 7 chips to 3.** The strip was six wrapped rows at 1280px, 296px tall, and five of the seven chips repeated something already on the same page. Kept `7 years building models and pipelines` (the only proof of "data scientist turned"), `Winner, Agentic AI Hackathon 2025` and `Instructor, Constructor Academy`: build, win, teach. The strip is now two rows and 92px, and the hero is 124px shorter.
+- Dropped chips and where each fact still lives: job title, in the lead sentence directly above it and the page title. MSc Barcelona GSE, in About. `EN · DE · 中文`, in the Speaking topics, where a booker can act on it. Sponsorship lead WiDS, in About.
+- Speaking intro loses "I bring the same thing that's on the rest of this site", which told the reader what the page already shows. The IATA talk no longer opens with "Lessons from SWISS and Lufthansa Group": those two names appear nine more times on the page.
+- About is four paragraphs still, but 190 words down to about 160. The filler sentence "Now I combine my love for health and fitness with data and engineering skills" is out; "I still train friends and measure success the way a coach does" already carried it.
+- Project cards evened out to roughly 25 to 30 words each. The ragpatterns card keeps "Most teams pick a pattern by accident" and ends there, which reads as a hook into the case study.
+- "The January Problem" drops its "from someone who has been both a personal trainer and an AI product lead" tag. The joke lands without it, and the personal trainer background is in About and on the fixmybanana card.
+- Case studies were left almost alone: their length is carrying numbers and caveats, which is the point of them. Two sentences trimmed, one in the airline background and one in fixmybanana.
+- Verified: no em or en dashes, no page scrolls sideways at 375px, all five pages and every internal link resolve.
+
 ## v2.14 · 11 September 2026 · remove How I work
 
 - The "How I work" section is out of the homepage. To restore it, take the block from `index.html` at commit `6c90da8` (the Decide / Prove / Translate version) and paste it back between Recognition and Speaking.
