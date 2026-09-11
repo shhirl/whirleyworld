@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ragpatterns · Shirley He</title>
+  <meta name="description" content="Seven RAG patterns, one bookshelf, nine fixed questions.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+<!-- Numbers and quotes below come from ragpatterns.com/how-its-built -->
+
+<header class="wrap nav">
+  <a class="logo" href="../../">Shirley He</a>
+  <nav class="nav-links">
+    <a href="../../#work">Work</a>
+    <a href="../../#about">About</a>
+    <a class="btn btn-dark btn-small" href="../../#contact">Get in touch</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- ---------- HEADER BLOCK ---------- -->
+<section class="wrap">
+  <a class="back" href="../../#work">← All work</a>
+
+  <div class="block grad-lilac cs-hero">
+    <p class="eyebrow">Case study 02 · Portfolio build</p>
+    <h1>ragpatterns</h1>
+    <p class="lead">Seven retrieval patterns, one corpus that happens to be my own bookshelf, and nine fixed questions with reference answers written before any pipeline ran. Most teams pick a RAG pattern by accident. This shows how to pick one on purpose.</p>
+
+    <div class="cs-actions">
+      <a class="btn btn-dark" href="https://ragpatterns.com">See the comparison ↗</a>
+      <a class="btn btn-light" href="https://ragpatterns.com/how-its-built">How it's built ↗</a>
+    </div>
+
+    <dl class="meta">
+      <div><dt>Role</dt><dd>Solo: design, build, grading</dd></div>
+      <div><dt>Stack</dt><dd>Claude Opus 5, Voyage, SQLite, NetworkX</dd></div>
+      <div><dt>Status</dt><dd>Live · v0 (predictions)</dd></div>
+      <div><dt>Hosting</dt><dd>Cloudflare Pages, Railway</dd></div>
+    </dl>
+  </div>
+
+  <div class="cs-image"><img src="../../images/ragpatterns.svg" alt="Illustration: naive RAG versus reranking"></div>
+</section>
+
+
+<section class="wrap steps">
+
+<!-- ---------- 01 BACKGROUND ---------- -->
+  <div class="step">
+    <div>
+      <span class="step-num">01</span>
+      <h3>Background</h3>
+    </div>
+    <div class="step-body">
+      <p>Teams usually choose one RAG setup early and then tune it forever. But patterns fail in different places. Similarity search can't count or filter. A plain vector index can't follow a relationship. Nothing text-only can read a photo. An agent can be slower and pricier than the question deserves.</p>
+      <p>I wanted one place where the same questions hit every pattern, so the differences are visible instead of argued about.</p>
+    </div>
+  </div>
+
+<!-- ---------- 02 SOLUTION ---------- -->
+  <div class="step">
+    <div>
+      <span class="step-num">02</span>
+      <h3>Solution</h3>
+    </div>
+    <div class="step-body">
+      <p>Seven patterns run side by side: naive vector search, reranking, a query tool, graph RAG, multimodal RAG, an agentic router and multi-agent. Everything else is held still: same corpus, same generation model, same prompt template.</p>
+      <ul>
+        <li><strong>Each question isolates one failure mode:</strong> quoted-text lookup, filtering a ledger, conflicting sources, relationships, identifying a book from a photo, combining several sources. The last three are questions I actually ask my bookshelf.</li>
+        <li><strong>The corpus is real and messy:</strong> Goodreads export, Kindle highlights, a list of who recommended what, and photos of covers and pages.</li>
+        <li><strong>The key design decision:</strong> the highlights are the semantic index and the ledger is a table. Structured data never gets embedded as text, which stops the system from inventing books.</li>
+      </ul>
+    </div>
+  </div>
+
+<!-- ---------- 03 RECEIPTS ---------- -->
+  <div class="step">
+    <div>
+      <span class="step-num">03</span>
+      <h3>Receipts</h3>
+    </div>
+    <div class="step-body">
+      <div class="stats">
+        <div class="stat grad-peach"><strong>7</strong><span>RAG patterns on the same corpus, model and prompt</span></div>
+        <div class="stat grad-lime"><strong>9</strong><span>fixed questions, reference answers written before any pipeline ran</span></div>
+        <div class="stat grad-blue"><strong>5</strong><span>runs per pattern, because a pattern that is right 3 times in 5 is not right</span></div>
+        <div class="stat grad-lilac"><strong>0</strong><span>points for an invented book, caught automatically against the library</span></div>
+      </div>
+      <p>I grade every answer by hand against the reference: correct scores 1, partial or generic 0.5, wrong or invented 0. Alongside the verdict I track whether the right source actually reached the model, how many model calls each pattern needs, latency and tokens.</p>
+      <p class="note">v0 publishes predicted traces, clearly labelled as predictions. Every result is a prediction until a version measures it.</p>
+    </div>
+  </div>
+
+<!-- ---------- 04 NOT DONE YET ---------- -->
+  <div class="step">
+    <div>
+      <span class="step-num">04</span>
+      <h3>Not done yet</h3>
+    </div>
+    <div class="step-body">
+      <ul>
+        <li><strong>v1</strong> · Naive, reranked and ledger tool live; first two rows measured.</li>
+        <li><strong>v2</strong> · Graph extraction; the relationship question measured.</li>
+        <li><strong>v3</strong> · Multimodal embeddings; the photo question measured.</li>
+        <li><strong>v4</strong> · Router and multi-agent measured.</li>
+        <li><strong>v5</strong> · Full grid, cost comparison, consistency rates, ten more questions and a second reader.</li>
+      </ul>
+      <p class="note">Known bias: a few hundred books is a small corpus, and small corpora flatter naive RAG. The questions are designed to push each pattern where it should win or lose.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ---------- NEXT PROJECT ---------- -->
+<section class="wrap section">
+  <a class="block grad-peach next" href="../make-my-gate/">
+    <div>
+      <p class="eyebrow">Next project</p>
+      <h2>Make My Gate</h2>
+    </div>
+    <span class="btn btn-dark">Read it →</span>
+  </a>
+</section>
+
+</main>
+
+<footer class="wrap footer">
+  <span>© 2026 Shirley He · Zurich</span>
+  <a href="mailto:shirleyishuman@gmail.com">shirleyishuman@gmail.com</a>
+</footer>
+
+</body>
+</html>

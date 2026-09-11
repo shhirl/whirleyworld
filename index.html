@@ -1,356 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shirley He — Welcome to Whirley World</title>
-  <meta name="description" content="Shirley He — AI product & strategy leader who builds AI things (one of them judges handstands). Data scientist at heart, community builder, perpetual traveller. Welcome to Whirley World." />
-  <meta property="og:title" content="Shirley He — Whirley World" />
-  <meta property="og:description" content="AI × aviation, things I've built, speaking & community, and the whirl of travel. Welcome to Whirley World." />
-  <meta property="og:url" content="https://www.whirleyworld.com" />
-  <meta property="og:type" content="website" />
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- EDIT: browser tab title + the description Google shows -->
+  <title>Shirley He · AI product lead and builder</title>
+  <meta name="description" content="Data scientist turned AI product lead. I ship things, measure whether they work, and explain them to non-engineers.">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- grain overlay -->
-  <div class="grain" aria-hidden="true"></div>
-
-  <!-- ======================== NAV ======================== -->
-  <nav class="nav" aria-label="Main navigation">
-    <a class="nav-logo" href="#hero" aria-label="Whirley World home">
-      <svg class="logo-whirl" viewBox="0 0 40 40" aria-hidden="true">
-        <path d="M20 4 A16 16 0 1 1 4 20" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
-        <path d="M20 11 A9 9 0 1 1 11 20" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
-        <circle cx="20" cy="20" r="3" fill="currentColor"/>
-      </svg>
-      <span>whirley&nbsp;world</span>
-    </a>
-    <div class="nav-links">
-      <a href="#builds">Builds</a>
-      <a href="#community">Speaking</a>
-      <a href="#about">About</a>
-      <a href="#contact" class="nav-cta">Say hi</a>
-    </div>
+<!-- =========================================================
+     NAV
+     ========================================================= -->
+<header class="wrap nav">
+  <a class="logo" href="/">Shirley He</a>
+  <nav class="nav-links">
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a class="btn btn-dark btn-small" href="#contact">Get in touch</a>
   </nav>
+</header>
 
-  <!-- ======================== HERO ======================== -->
-  <header class="hero" id="hero">
-    <svg class="hero-spiral" viewBox="0 0 600 600" aria-hidden="true">
-      <g class="spin-slow" style="transform-origin: 300px 300px;">
-        <circle cx="300" cy="300" r="280" fill="none" stroke="var(--violet)" stroke-width="2" stroke-dasharray="4 14" opacity="0.35"/>
-        <circle cx="300" cy="300" r="210" fill="none" stroke="var(--coral)" stroke-width="2" stroke-dasharray="4 12" opacity="0.35"/>
-        <circle cx="300" cy="300" r="140" fill="none" stroke="var(--teal)" stroke-width="2" stroke-dasharray="4 10" opacity="0.35"/>
-        <circle cx="580" cy="300" r="10" fill="var(--violet)"/>
-        <circle cx="300" cy="90"  r="8"  fill="var(--coral)"/>
-        <circle cx="160" cy="300" r="6"  fill="var(--teal)"/>
-      </g>
-    </svg>
+<main>
 
-    <div class="hero-orbit" aria-hidden="true">
-      <div class="orbit-arm">
-        <img class="orbit-photo" src="assets/shirley-portrait.jpg" alt="" />
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+<section class="wrap">
+  <div class="block grad-sunset hero">
+    <div>
+      <p class="eyebrow">Shirley He · Zurich</p>
+
+      <!-- EDIT: headline. Words inside <em> show in italic purple. -->
+      <h1>Data scientist turned <em>AI product lead.</em></h1>
+
+      <p class="lead">I ship things, measure whether they work, and explain them to non-engineers.</p>
+
+      <div class="hero-actions">
+        <a class="btn btn-dark" href="#work">See the work</a>
+        <a class="btn btn-light" href="mailto:shirleyishuman@gmail.com">Email me</a>
       </div>
+
+      <!-- EDIT: three quick facts -->
+      <ul class="chips facts">
+        <li class="chip">AI Product Lead at SWISS</li>
+        <li class="chip">Instructor, Constructor Academy</li>
+        <li class="chip">Sponsorship lead, WiDS Zurich</li>
+      </ul>
     </div>
 
-    <div class="hero-inner reveal">
-      <span class="badge badge-tilt-l">📍 Zürich, Switzerland</span>
-      <h1>
-        Hi, I'm <span class="squiggle">Shirley</span>.<br/>
-        Welcome to <span class="hero-whirl-word">Whirley&nbsp;World</span>.
-      </h1>
-      <p class="hero-sub">
-        I lead <strong>AI products &amp; strategy</strong> at an airline — teaching planes-worth
-        of data to think — and I <strong>build AI things</strong> on the side.
-        One of them judges my handstands.
-      </p>
-      <p class="hero-pronounce">
-        <em>whirley</em> /ˈwɜː(r)li/ — like Shirley, set in motion.
-      </p>
-      <div class="hero-ctas">
-        <a class="btn btn-primary" href="#spin">See what I spin&nbsp;↓</a>
-        <a class="btn btn-ghost" href="#contact">Say hi</a>
+    <div class="portrait-wrap">
+      <div class="portrait">
+        <!-- EDIT: to change the photo, replace assets/shirley-portrait.jpg -->
+        <img src="assets/shirley-portrait.jpg" alt="Portrait of Shirley He">
       </div>
-    </div>
-
-    <span class="sticker sticker-1 badge">✈️ AI × aviation</span>
-    <span class="sticker sticker-2 badge">📊 data at heart</span>
-    <span class="sticker sticker-3 badge">🌍 EN · DE · 中文</span>
-  </header>
-
-  <!-- ======================== CREDIBILITY ======================== -->
-  <div class="cred-strip reveal" aria-label="Credentials">
-    <span class="badge badge-tilt-l">✈️ AI Product Strategy @ SWISS</span>
-    <span class="badge">🤖 Lufthansa Group · zeroG</span>
-    <span class="badge badge-tilt-r">👩‍💻 WiDS Zürich committee</span>
-    <span class="badge badge-tilt-l">🎓 MSc Data Science · Barcelona GSE</span>
-  </div>
-
-  <!-- ======================== MARQUEE ======================== -->
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee-track">
-      <span>AI × AVIATION ✦ THINGS I'VE BUILT ✦ SPEAKING &amp; COMMUNITY ✦ THE WHIRL ✦ ZÜRICH ✦ </span>
-      <span>AI × AVIATION ✦ THINGS I'VE BUILT ✦ SPEAKING &amp; COMMUNITY ✦ THE WHIRL ✦ ZÜRICH ✦ </span>
+      <span class="sticker">builder with receipts</span>
     </div>
   </div>
+</section>
 
-  <!-- ======================== PILLARS ======================== -->
-  <main id="spin">
-    <div class="section-head reveal">
-      <h2>What I spin</h2>
-      <p>Come for a quick whirl.</p>
+
+<!-- =========================================================
+     WORK  (one <a class="card"> per project)
+     To add a project: copy a whole <a class="card"> ... </a> block.
+     ========================================================= -->
+<section class="wrap section" id="work">
+  <div class="section-head">
+    <div>
+      <p class="eyebrow">Selected work</p>
+      <h2>Projects, with receipts.</h2>
     </div>
+    <p>Every project shows the evals, what failed, and what I'd do differently. Ordered by impact.</p>
+  </div>
 
-    <!-- 01 · AI × Aviation -->
-    <section class="pillar pillar-coral" id="ai-aviation">
-      <div class="pillar-inner reveal">
-        <div class="pillar-label">
-          <span class="pillar-num">01</span>
-          <span class="badge badge-tilt-r">day job, dream job</span>
-        </div>
-        <h3>AI × Aviation</h3>
-        <p class="pillar-lede">
-          I lead AI products and strategy at <strong>Swiss International Air Lines</strong>,
-          transforming how customers experience air travel. My favourite kind of problem:
-          taking something as complex as an airline and making it feel effortless.
-        </p>
-        <div class="card-row">
-          <div class="card">
-            <span class="card-emoji">🧭</span>
-            <h4>Strategy</h4>
-            <p>Charting where AI genuinely moves the needle for travellers — and where it's just turbulence.</p>
-          </div>
-          <div class="card">
-            <span class="card-emoji">🛠️</span>
-            <h4>Products</h4>
-            <p>From idea to boarding: shipping AI-powered experiences into the hands of millions of passengers.</p>
-          </div>
-          <div class="card">
-            <span class="card-emoji">🤝</span>
-            <h4>People</h4>
-            <p>Bringing crews, engineers, and executives into the same flight plan for AI.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+  <div class="cards">
 
-    <!-- 02 · Things I've built -->
-    <section class="pillar pillar-banana" id="builds">
-      <div class="pillar-inner reveal">
-        <div class="pillar-label">
-          <span class="pillar-num">02</span>
-          <span class="badge badge-tilt-l">strategy you can click</span>
+    <!-- PROJECT 01 -->
+    <a class="card" href="work/airline-assistant/">
+      <div class="card-image"><img src="images/enterprise-assistant.svg" alt=""></div>
+      <div class="card-body">
+        <div class="card-top">
+          <span class="card-num">01</span>
+          <span class="tag tag-enterprise">Enterprise</span>
         </div>
-        <h3>Things I've built</h3>
-        <p class="pillar-lede">
-          I believe AI strategy written by people who've never built anything is fiction.
-          So I keep building — small, real, slightly ridiculous.
-        </p>
-        <div class="card-row">
-          <div class="card">
-            <span class="card-emoji">🍌</span>
-            <h4>fixmybanana</h4>
-            <p>An AI coach that looks at your handstand photo, finds your spine, and tells you
-            exactly how much of a banana you are. Free, and brutally honest — it gave its own
-            creator 6.8/10.</p>
-          </div>
-          <div class="card">
-            <span class="card-emoji">🤝</span>
-            <h4>Vouch</h4>
-            <p>A fitness accountability app for two people — and only two. You, your person,
-            a weekly pact, and a coffee on the line for whoever falls short. Native iOS app
-            in the works; waitlist open at <a href="https://vouchfit.app" target="_blank" rel="noopener">vouchfit.app</a>.</p>
-          </div>
-          <div class="card">
-            <span class="card-emoji">🌙</span>
-            <h4>JetSync</h4>
-            <p>Jet lag, but shorter: your flight goes in, an hour-by-hour recovery plan comes out —
-            built around <em>when you exercise</em>. Currently testing whether people want it
-            before building it properly. That's the strategy part.</p>
-          </div>
-          <div class="card">
-            <span class="card-emoji">🌀</span>
-            <h4>Next up</h4>
-            <p>Something for everyone in Switzerland who fears the official A4 envelope.
-            Spinning up now — follow along to watch it break first.</p>
-          </div>
-        </div>
-        <a class="btn btn-outline" href="https://www.fixmybanana.com" target="_blank" rel="noopener">
-          Get your handstand judged&nbsp;↗
-        </a>
+        <h3>Airline AI assistant</h3>
+        <p>Growing an airline group's customer chat assistant from answering questions into orchestrating agents, with loyalty built in.</p>
+        <span class="card-link">Read the case study →</span>
       </div>
-    </section>
+    </a>
 
-    <!-- 03 · Speaking & community -->
-    <section class="pillar pillar-teal" id="community">
-      <div class="pillar-inner reveal">
-        <div class="pillar-label">
-          <span class="pillar-num">03</span>
-          <span class="badge badge-tilt-r">paying it forward</span>
+    <!-- PROJECT 02 -->
+    <a class="card" href="work/ragpatterns/">
+      <div class="card-image"><img src="images/ragpatterns.svg" alt=""></div>
+      <div class="card-body">
+        <div class="card-top">
+          <span class="card-num">02</span>
+          <span class="tag tag-live">Live · v0</span>
         </div>
-        <h3>Speaking &amp; community</h3>
-        <p class="pillar-lede">
-          The best thing about data and AI is the people you get to spin up along the way.
-        </p>
-        <div class="card-row">
-          <div class="card">
-            <span class="card-emoji">🎤</span>
-            <h4>Talks &amp; panels</h4>
-            <p>Current talk: <strong>The January Problem</strong> — why AI strategies fail like
-            New Year's resolutions, from someone who's been both a personal trainer and an AI
-            strategy lead. Also: AI product strategy, AI in aviation, career reinvention.
-            Invite me — I'll bring the energy.</p>
-          </div>
-          <div class="card">
-            <span class="card-emoji">👩‍💻</span>
-            <h4>WiDS Zürich</h4>
-            <p>On the organizing committee for Women in Data Science Zürich — sponsorships and community building.</p>
-          </div>
-          <div class="card">
-            <span class="card-emoji">🧒</span>
-            <h4>CoderDojo mentor</h4>
-            <p>Taught HTML and Python to kids aged 7–17. If a seven-year-old can't follow your explanation, it isn't finished.</p>
-          </div>
-        </div>
+        <h3>ragpatterns</h3>
+        <p>Seven RAG patterns, one bookshelf, nine questions with answers written before any pipeline ran. Most teams pick a pattern by accident. This shows how to pick one on purpose.</p>
+        <span class="card-link">Read the case study →</span>
       </div>
-    </section>
+    </a>
 
-    <!-- 04 · The Whirl -->
-    <section class="pillar pillar-tangerine" id="the-whirl">
-      <div class="pillar-inner reveal">
-        <div class="pillar-label">
-          <span class="pillar-num">04</span>
-          <span class="badge badge-tilt-l">off duty</span>
+    <!-- PROJECT 03 -->
+    <a class="card" href="work/make-my-gate/">
+      <div class="card-image"><img src="images/makemygate.svg" alt=""></div>
+      <div class="card-body">
+        <div class="card-top">
+          <span class="card-num">03</span>
+          <span class="tag tag-live">Live</span>
         </div>
-        <h3>The Whirl</h3>
-        <p class="pillar-lede">
-          Working for an airline is dangerous for someone who loves to travel.
-          London → Barcelona → Zürich so far; the rest of the map is a to-do list.
-        </p>
-        <div class="polaroids">
-          <figure class="polaroid tilt-l">
-            <div class="polaroid-img ph-1"><span>🗺️</span></div>
-            <figcaption>somewhere new</figcaption>
-          </figure>
-          <figure class="polaroid tilt-r">
-            <div class="polaroid-img"><img src="assets/whirl-alps.jpg" alt="Shirley celebrating mid-hike in the Alps" /></div>
-            <figcaption>weekend altitude</figcaption>
-          </figure>
-          <figure class="polaroid tilt-l2">
-            <div class="polaroid-img ph-3"><span>✈️</span></div>
-            <figcaption>window seat, always</figcaption>
-          </figure>
-        </div>
-        <a class="btn btn-outline" href="https://www.instagram.com/shirleywhirlhe" target="_blank" rel="noopener">
-          Follow the whirl on Instagram&nbsp;↗
-        </a>
+        <h3>Make My Gate</h3>
+        <p>You land at D33 from Bangkok and fly out of A63 in 50 minutes. Will you make it? A Zurich connection planner: graph plus orchestrator scored 100% on 25 test questions, naive RAG scored 28%.</p>
+        <span class="card-link">Read the case study →</span>
       </div>
-    </section>
+    </a>
 
-    <!-- ======================== ABOUT ======================== -->
-    <section class="about" id="about">
-      <div class="about-inner reveal">
-        <div class="about-avatar" aria-hidden="true">
-          <svg viewBox="0 0 200 200">
-            <g class="spin-slow" style="transform-origin: 100px 100px;">
-              <circle cx="100" cy="100" r="92" fill="none" stroke="var(--coral)" stroke-width="5" stroke-dasharray="10 16" stroke-linecap="round"/>
-            </g>
-            <circle cx="100" cy="100" r="70" fill="var(--violet)"/>
-            <text x="100" y="118" text-anchor="middle" font-size="52">👋</text>
-          </svg>
+    <!-- PROJECT 04 -->
+    <a class="card" href="work/fixmybanana/">
+      <div class="card-image"><img src="images/fixmybanana.svg" alt=""></div>
+      <div class="card-body">
+        <div class="card-top">
+          <span class="card-num">04</span>
+          <span class="tag tag-live">Live</span>
         </div>
-        <div class="about-text">
-          <h2>About me</h2>
-          <p>
-            I'm Shirley He — an AI product and strategy leader living in Zürich.
-            My first career was personal training in a London gym. My second started with
-            a data science master's in Barcelona (econometrics, machine learning, more GARCH
-            models than anyone needs) and five years in the engine room — models, pipelines,
-            cloud migrations. I grew into the part I love most: turning technical possibility
-            into products people actually feel.
-          </p>
-          <p>
-            These days that means leading AI at <strong>SWISS</strong>. Outside of it, I help run
-            <strong>WiDS Zürich</strong>, mentor whenever I can, and collect boarding passes.
-            I work in English, German, and Chinese — and in spreadsheets, fluently.
-          </p>
-          <p>
-            Off duty you'll find me mid-marathon, mid-handstand, or mid-book —
-            I read everything from econometrics to novels, and I write. More on that soon.
-          </p>
-          <div class="chip-cloud">
-            <span class="chip">🇬🇧 English — native</span>
-            <span class="chip">🇩🇪 Deutsch</span>
-            <span class="chip">🇨🇳 中文</span>
-          </div>
-          <div class="about-links">
-            <a class="social-link" href="https://www.linkedin.com/in/shhirl" target="_blank" rel="noopener" aria-label="LinkedIn">
-              <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
-              <span>LinkedIn</span>
-            </a>
-            <a class="social-link" href="https://github.com/shhirl" target="_blank" rel="noopener" aria-label="GitHub">
-              <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-              <span>GitHub</span>
-            </a>
-            <a class="social-link" href="https://www.instagram.com/shirleywhirlhe" target="_blank" rel="noopener" aria-label="Instagram">
-              <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-              <span>Instagram</span>
-            </a>
-          </div>
-        </div>
+        <h3>fixmybanana</h3>
+        <p>Upload a handstand photo and a vision model calls it: good form or banana back. A joke app with a serious eval: 54 test photos, 60% agreement with my labels, every failure written up.</p>
+        <span class="card-link">Read the case study →</span>
       </div>
-    </section>
+    </a>
 
-    <!-- ======================== CONTACT ======================== -->
-    <section class="contact" id="contact">
-      <div class="contact-inner reveal">
-        <h2>Give me a whirl</h2>
-        <p>
-          Talks, panels, AI × aviation ideas, WiDS things, or a good coffee spot in Zürich —
-          my inbox is an open door.
-        </p>
-        <button class="btn btn-primary btn-copy" id="copy-email" data-email="shirley.he09@gmail.com">
-          📋 Copy my e-mail
-        </button>
-        <p class="contact-alt">
-          or find me on <a href="https://www.linkedin.com/in/shhirl" target="_blank" rel="noopener">LinkedIn</a> —
-          usually the fastest runway.
-        </p>
-      </div>
-    </section>
-  </main>
+  </div>
+</section>
 
-  <!-- ======================== FOOTER ======================== -->
-  <footer class="footer">
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee-track marquee-reverse">
-        <span>MADE IN ZÜRICH ✦ POWERED BY CURIOSITY ✦ WINDOW SEAT ONLY ✦ KEEP SPINNING ✦ </span>
-        <span>MADE IN ZÜRICH ✦ POWERED BY CURIOSITY ✦ WINDOW SEAT ONLY ✦ KEEP SPINNING ✦ </span>
-      </div>
+
+<!-- =========================================================
+     HOW I WORK
+     ========================================================= -->
+<section class="wrap section">
+  <div class="section-head">
+    <div>
+      <p class="eyebrow">How I work</p>
+      <h2>Ship. Measure. Explain.</h2>
     </div>
-    <div class="footer-inner">
-      <p>© 2026 Shirley He · <a href="https://github.com/shhirl/whirleyworld" target="_blank" rel="noopener">view source ↗</a></p>
-      <div class="footer-social">
-        <a href="https://www.linkedin.com/in/shhirl" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
-        </a>
-        <a href="https://github.com/shhirl" target="_blank" rel="noopener" aria-label="GitHub">
-          <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-        </a>
-        <a href="https://www.instagram.com/shirleywhirlhe" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-        </a>
-      </div>
-      <p class="footer-spin">🌀 you've reached the end of the whirl</p>
+  </div>
+
+  <div class="three">
+    <div class="pillar grad-peach">
+      <span class="pillar-num">01</span>
+      <h3>Ship</h3>
+      <p>I build the thing, not just the slide. Prototypes reach real users early, and production systems get safety checks from day one.</p>
     </div>
-  </footer>
+    <div class="pillar grad-lilac">
+      <span class="pillar-num">02</span>
+      <h3>Measure</h3>
+      <p>Every project has an eval. I publish the numbers, bad ones included, because an honest number with a reason beats a clean number nobody can check.</p>
+    </div>
+    <div class="pillar grad-blue">
+      <span class="pillar-num">03</span>
+      <h3>Explain</h3>
+      <p>I teach data science and translate AI for product, business and leadership teams. If a stakeholder can't repeat it, I haven't explained it.</p>
+    </div>
+  </div>
+</section>
 
-  <div class="toast" id="toast" role="status" aria-live="polite">Copied! 🎉</div>
 
-  <script src="main.js"></script>
+<!-- =========================================================
+     ABOUT
+     ========================================================= -->
+<section class="wrap section" id="about">
+  <div class="about">
+    <div>
+      <p class="eyebrow">About</p>
+      <h2>From coaching to code.</h2>
+    </div>
+    <div class="about-text">
+      <!-- EDIT: the first paragraph shows larger, in the serif font -->
+      <p>Before data science I was a personal trainer. Now I combine my love for health and fitness with data and engineering skills. I still train friends and measure success the way a coach does: by what someone can do now that they couldn't before.</p>
+      <p>Today I'm AI Product Lead at SWISS, part of Lufthansa Group's Digital Hangar. I run the AI portfolio for our customer digital experience domain and decide which ideas get funded and which get stopped. Because I came from data science, I read every pitch from both sides: does it hold up technically, and will it survive real users, real data and real constraints?</p>
+      <p>Outside work I teach at Constructor Academy in Zurich and lead sponsorships for Women in Data Science Zurich.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================
+     SIDE PROJECT STRIP
+     ========================================================= -->
+<section class="wrap">
+  <div class="strip grad-lilac">
+    <div>
+      <p class="eyebrow">Also on my desk</p>
+      <h3>10 AI Workflows for Product Managers</h3>
+      <p>Prompts, examples and quality checks for the work PMs do every week. Pre-orders open, delivered October 2026.</p>
+    </div>
+    <a class="btn btn-dark" href="https://stan.store/shhirl/p/10-ai-workflows-for-product-managers">Pre-order</a>
+  </div>
+</section>
+
+
+<!-- =========================================================
+     CONTACT
+     ========================================================= -->
+<section class="wrap section" id="contact">
+  <div class="block grad-lime contact">
+    <p class="eyebrow">Contact</p>
+    <h2>Have an AI product that needs to work?</h2>
+    <p class="lead">I take on freelance AI consulting and workshops. Tell me what you're building.</p>
+    <a class="email" href="mailto:shirleyishuman@gmail.com">shirleyishuman@gmail.com</a>
+
+    <!-- EDIT: social links -->
+    <div class="socials">
+      <a class="btn btn-light btn-small" href="https://www.linkedin.com/in/shhirl">LinkedIn</a>
+      <a class="btn btn-light btn-small" href="https://github.com/shhirl">GitHub</a>
+      <a class="btn btn-light btn-small" href="https://www.tiktok.com/@shhirl">TikTok</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="wrap footer">
+  <span>© 2026 Shirley He · Zurich</span>
+  <span>Built by hand, measured anyway.</span>
+</footer>
+
 </body>
 </html>

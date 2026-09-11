@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Make My Gate · Shirley He</title>
+  <meta name="description" content="A Zurich airport connection planner: graph plus orchestrator versus naive RAG.">
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+<!-- Numbers and quotes below come from makemygate.app/how-its-built -->
+
+<header class="wrap nav">
+  <a class="logo" href="../../">Shirley He</a>
+  <nav class="nav-links">
+    <a href="../../#work">Work</a>
+    <a href="../../#about">About</a>
+    <a class="btn btn-dark btn-small" href="../../#contact">Get in touch</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- ---------- HEADER BLOCK ---------- -->
+<section class="wrap">
+  <a class="back" href="../../#work">← All work</a>
+
+  <div class="block grad-peach cs-hero">
+    <p class="eyebrow">Case study 03 · Portfolio build</p>
+    <h1>Make My Gate</h1>
+    <p class="lead">You land at D33 from Bangkok and fly out of A63 in 50 minutes. Will you make it? A Zurich connection planner that answers yes, tight or no, shows the route, and cites the public rule behind every checkpoint.</p>
+
+    <div class="cs-actions">
+      <a class="btn btn-dark" href="https://makemygate.app">Try Make My Gate ↗</a>
+      <a class="btn btn-light" href="https://makemygate.app/how-its-built">How it's built ↗</a>
+    </div>
+
+    <dl class="meta">
+      <div><dt>Role</dt><dd>Solo: design, build, eval</dd></div>
+      <div><dt>Stack</dt><dd>Claude Haiku 4.5, FastAPI, Railway</dd></div>
+      <div><dt>Status</dt><dd>Live · Zurich only</dd></div>
+      <div><dt>Data</dt><dd>Public sources only</dd></div>
+    </dl>
+  </div>
+
+  <div class="cs-image"><img src="../../images/makemygate.svg" alt="Illustration: route from gate D33 through passport control and security to A63"></div>
+</section>
+
+
+<section class="wrap steps">
+
+<!-- ---------- 01 BACKGROUND ---------- -->
+  <div class="step">
+    <div>
+      <span class="step-num">01</span>
+      <h3>Background</h3>
+    </div>
+    <div class="step-body">
+      <p>A tight connection is a real traveller problem and a hard test for RAG. The answer depends on geography (which pier, which level), rules (Schengen or not, security again or not) and arithmetic (walking plus queues against the minimum connection time).</p>
+      <p>Text retrieval can find the right paragraph and still get the route wrong. At Zurich, B and D are one pier: the same physical door gets a B number for Schengen flights and a D number for non-Schengen ones, and that is exactly where passport control hides.</p>
+    </div>
+  </div>
+
+<!-- ---------- 02 SOLUTION ---------- -->
+  <div class="step">
+    <div>
+      <span class="step-num">02</span>
+      <h3>Solution</h3>
+    </div>
+    <div class="step-body">
+      <p>Decide which step needs a model before choosing a retriever. Here it was one step out of six. Everything after reading the question is code.</p>
+      <ul>
+        <li><strong>Question reader:</strong> Claude Haiku 4.5 turns a messy question into structured slots: arrival, departure, minutes, origin, status.</li>
+        <li><strong>Orchestrator:</strong> routes by question shape, and asks or declines when a question is ambiguous or out of scope.</li>
+        <li><strong>Five workers:</strong> gate mapping, checkpoint rules, shortest route on a 22-node airport graph, minimum connection time, lounge eligibility.</li>
+        <li><strong>Validator and composer:</strong> six checks, then the answer is filled into templates. "The validator can prove every route edge exists; it can't prove a paragraph."</li>
+      </ul>
+    </div>
+  </div>
+
+<!-- ---------- 03 RECEIPTS ---------- -->
+  <div class="step">
+    <div>
+      <span class="step-num">03</span>
+      <h3>Receipts</h3>
+    </div>
+    <div class="step-body">
+      <div class="stats">
+        <div class="stat grad-lime"><strong>100%</strong><span>graph + orchestrator workflow, all four checks right on 25 test questions</span></div>
+        <div class="stat grad-blue"><strong>76%</strong><span>agent with the same five tools (72% on 50 held-out rewordings)</span></div>
+        <div class="stat grad-peach"><strong>28%</strong><span>naive vector RAG. Hybrid search plus reranker: 24%</span></div>
+        <div class="stat grad-lilac"><strong>~15¢</strong><span>one full eval run of the systems on all 25 questions</span></div>
+      </div>
+      <p>An answer only counts as right if behaviour, verdict, exact route and cited rules all match. Six of the 25 questions expect the system to ask or decline, and each question carries a named trap: same zone, passport, lookalike gates, minimum connection time.</p>
+      <ul>
+        <li>Better retrieval made routing worse: the reranked system answered more often and flipped more verdicts.</li>
+        <li>The agent missed 20 of 75 questions, mostly by skipping checkpoint rules on non-Schengen arrivals (9 cases). The validator caught every one.</li>
+        <li>The graph system reads a quarter of the baseline's input tokens, because the model only reads the question.</li>
+      </ul>
+      <p class="note">The 100% is inflated by design: the expected routes come from the same graph the planner searches, so it proves internal consistency, not real-world accuracy. The 50 rewordings were written after prompt tuning stopped.</p>
+    </div>
+  </div>
+
+<!-- ---------- 04 NOT DONE YET ---------- -->
+  <div class="step">
+    <div>
+      <span class="step-num">04</span>
+      <h3>Not done yet</h3>
+    </div>
+    <div class="step-body">
+      <ul>
+        <li><strong>Live data.</strong> Delays, gate changes and queue lengths aren't public, so the re-planning loop is built and tested on 12 simulated events (75% fully right) but not switched on.</li>
+        <li><strong>Weakest source.</strong> The 40-minute minimum connection time is commonly cited and unsourced, and seven verdicts depend on it.</li>
+        <li><strong>Ground truth.</strong> Walking times are estimates from gate geometry, marked as such on the site.</li>
+        <li><strong>Next layer.</strong> Live position, turn-by-turn directions, reading the sign in front of you, audio. The rules layer built here stays the part that's hard to copy.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- ---------- NEXT PROJECT ---------- -->
+<section class="wrap section">
+  <a class="block grad-lime next" href="../fixmybanana/">
+    <div>
+      <p class="eyebrow">Next project</p>
+      <h2>fixmybanana</h2>
+    </div>
+    <span class="btn btn-dark">Read it →</span>
+  </a>
+</section>
+
+</main>
+
+<footer class="wrap footer">
+  <span>© 2026 Shirley He · Zurich</span>
+  <a href="mailto:shirleyishuman@gmail.com">shirleyishuman@gmail.com</a>
+</footer>
+
+</body>
+</html>
