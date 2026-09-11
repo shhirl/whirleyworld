@@ -475,11 +475,54 @@ p { margin: 0 0 1em; }
 .next h2 { font-size: clamp(2rem, 4vw, 3.2rem); }
 
 
+/* ---------- 12b. SPEAKING ---------- */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+.shot { margin: 0; }
+.shot img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--ink);
+  display: block;
+}
+.shot figcaption {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+.talks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.talk {
+  border-top: 1.5px solid var(--ink);
+  padding-top: 20px;
+}
+.talk h3 { margin: 0 0 10px; font-size: 1.5rem; }
+.talk p { margin: 0; color: var(--muted); }
+.talk-meta {
+  margin-top: 12px !important;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink) !important;
+}
+.talks-label { margin-top: 48px; }
+
 /* ---------- 16. MOBILE ---------- */
 @media (max-width: 900px) {
   .hero, .about, .step { grid-template-columns: 1fr; gap: 28px; }
   .portrait-wrap { max-width: 300px; }
-  .cards, .three { grid-template-columns: 1fr; }
+  .cards, .three, .talks { grid-template-columns: 1fr; }
+  .gallery { grid-template-columns: repeat(2, 1fr); }
   .meta { grid-template-columns: repeat(2, 1fr); }
   .section { padding-block: 48px; }
   .step { padding-block: 40px; }
@@ -489,5 +532,5 @@ p { margin: 0 0 1em; }
   .nav-links a:not(.btn) { display: none; }
   .sticker { left: 12px; }
   .strip { padding: 24px; }
-  .stats { grid-template-columns: 1fr; }
+  .stats, .gallery { grid-template-columns: 1fr; }
 }
