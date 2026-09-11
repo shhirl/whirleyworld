@@ -248,6 +248,9 @@ p { margin: 0 0 1em; }
 .portrait-wrap { position: relative; }
 
 .facts { margin-top: 28px; }
+/* The chips need ~840px for one row and the hero text column caps at ~560px,
+   so they live as their own full-width hero row instead of inside that column. */
+.hero .facts { grid-column: 1 / -1; margin-top: 8px; }
 
 
 /* ---------- 8. SECTION HEADINGS ---------- */
