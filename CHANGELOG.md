@@ -2,6 +2,52 @@
 
 One entry per release of www.whirleyworld.com. Newest first.
 
+## v2.14 · 11 September 2026 · remove How I work
+
+- The "How I work" section is out of the homepage. To restore it, take the block from `index.html` at commit `6c90da8` (the Decide / Prove / Translate version) and paste it back between Recognition and Speaking.
+- `.three`, `.pillar` and `.pillar-num` styles are deliberately kept in the stylesheet and marked, so restoring is an HTML paste with no CSS work.
+- Nothing linked to the section, so no navigation changes were needed.
+
+## v2.13 · 11 September 2026 · fix cropped illustrations
+
+- Project card images were being chopped, not cropped. `.card-image` had `aspect-ratio: 2/1` but was also a grid, and a grid row's automatic minimum is the item's intrinsic height, which overrides the ratio. The image rendered full height inside a shorter box with `overflow: hidden`, losing its bottom fifth. Worst on fixmybanana, where it sliced the "good form" and "banana back" pills.
+- `.card-image` is now `display: block`, and the paired variant uses `grid-auto-rows: minmax(0, 1fr)`. Images render at a true 2:1 and `object-fit: cover` centre-crops as intended.
+- Stacked pairs below 560px were 2.5:1 per image, cropping harder than desktop. Now 1/1 on the container, so each stacked image is 2:1 like everywhere else.
+- fixmybanana pills moved up 25 units, Make My Gate "tight!" pill down 18. Both sat on the crop line.
+
+## v2.12 · 11 September 2026 · Decide, Prove, Translate
+
+- "How I work" was the only section that asserted without evidence, and its verbs (Ship, Measure, Explain) described a maker rather than someone who decides what gets funded.
+- New pillars: Decide, Prove, Translate, under the heading "From experimentation to adoption", which is the title of the IATA talk.
+- Numbers quoted from the case studies: 60% agreement with my own labels (fixmybanana), 28% naive RAG against 100% for the graph (Make My Gate).
+
+## v2.11 · 11 September 2026 · tighter project cards
+
+- Project cards about 16% shorter: 515px instead of 612px. Image ratio 16:10 to 2:1, tighter body padding and description type.
+- Section heading "Projects, with receipts." is now just "Projects".
+- Subheading drops "Ordered by impact" and ends on what I learned from building it.
+
+## v2.10 · 11 September 2026 · hackathon win
+
+- New Recognition strip after the work section: winner of the Lufthansa Group Digital Hangar Agentic AI Hackathon with IBM, Microsoft and Cognigy, May 2025, for RetentionAI. The site had no awards anywhere before this.
+- New credentials chip: Winner, Agentic AI Hackathon 2025.
+- Female Digital Pioneer photos swapped: a different frame from the talk, and the cohort graduation photo replacing the "Building Connections" still.
+
+## v2.9 · 11 September 2026 · Female Digital Pioneer
+
+- Third speaking entry: "Breaking Barriers and Redefining Leadership", the Ambition Pitch for Female Digital Pioneer, January 2024, with two stills from the recording.
+- Adds the women in technology leadership thread, which the site did not have anywhere despite the WiDS role.
+- New topic chip: women in technology leadership.
+
+## v2.8 · 11 September 2026 · per-project card images
+
+Project cards no longer use one treatment for all four.
+
+- 01 Airline and 02 ragpatterns: illustration only, as normal tiles. ragpatterns goes back to its original drawing.
+- 03 Make My Gate and 04 fixmybanana: full-width cards showing the illustration and the live site side by side, each image complete.
+- New `card-wide` and `card-pair` classes. A pair stacks vertically below 900px so neither image gets squeezed.
+- fixmybanana's screenshot recropped to its content card instead of the wallpaper around it.
+
 ## v2.7 · 11 September 2026 · fix wrong TikTok link
 
 - The footer TikTok link pointed at tiktok.com/@shhirl, which is somebody else's account. Corrected to tiktok.com/@shhirl0. LinkedIn and GitHub are unchanged and correct.

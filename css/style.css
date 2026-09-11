@@ -319,6 +319,8 @@ p { margin: 0 0 1em; }
 
 
 /* ---------- 10. HOW I WORK (three columns) ---------- */
+/* Kept on purpose: the How I work section is out of index.html for now.
+   Restore the block and these styles still apply. */
 .three {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
