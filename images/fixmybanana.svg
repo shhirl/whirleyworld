@@ -6,11 +6,11 @@
   <path d="M250 110 C 300 320, 500 350, 590 140 C 540 280, 330 270, 250 110 Z" fill="#fff2a8" stroke="#1f1c24" stroke-width="4" stroke-linejoin="round"/>
   <path d="M250 110 l-14 -26" stroke="#1f1c24" stroke-width="6" stroke-linecap="round"/>
   <g stroke="#1f1c24" stroke-width="3">
-    <rect x="170" y="385" width="200" height="64" rx="32" fill="#fffaf4"/>
-    <rect x="430" y="385" width="200" height="64" rx="32" fill="#f9b286"/>
+    <rect x="170" y="360" width="200" height="64" rx="32" fill="#fffaf4"/>
+    <rect x="430" y="360" width="200" height="64" rx="32" fill="#f9b286"/>
   </g>
   <g font-family="DM Sans, sans-serif" font-weight="700" font-size="24" fill="#1f1c24" text-anchor="middle">
-    <text x="270" y="425">good form</text>
-    <text x="530" y="425">banana back</text>
+    <text x="270" y="400">good form</text>
+    <text x="530" y="400">banana back</text>
   </g>
 </svg>
