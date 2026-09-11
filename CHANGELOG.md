@@ -2,6 +2,15 @@
 
 One entry per release of www.whirleyworld.com. Newest first.
 
+## v2.16 · 11 September 2026 · hero chip rail, new sticker
+
+- **Hero chips now hold one row.** This was never a breakpoint problem. The three chips need about 840px for a single row, and the hero text column caps at about 560px even at a 1440 viewport, because the `.wrap` max-width stops it growing. They could not fit at any width.
+- The strip moved out of the text column and became its own full-width hero row, spanning both grid columns (`.hero .facts { grid-column: 1 / -1 }`). Measured: 1 row and 41px at 1440, 1280 and 1100; 2 rows and 92px at 960 and 880, splitting 2+1, which still reads as a rail; 3 rows at 375, which is correct on a phone. It was six rows and 296px before the copy polish.
+- **If you add a fourth chip**, it will push the strip to two rows below roughly 1250px. Three is the number that holds one row across laptop widths.
+- **Sticker: "builder with receipts" is now "no eval, no ship".** "Builder" is generic AI-scene jargon and "receipts" is internet slang that dates and reads faintly combative. It was also the only line on the site that performed rather than described. The replacement states an operating rule, which suits someone who decides what gets funded and what gets stopped.
+- All eight candidates were measured at 375px, the tightest case for a `white-space: nowrap` sticker. None clipped, so the choice was editorial rather than constrained.
+- Verified: no em or en dashes, no sideways scroll at 375px on all five pages, every internal link resolves.
+
 ## v2.15 · 11 September 2026 · copy polish
 
 - Editorial pass across the homepage and two case studies. Visible homepage copy is down from 777 to 668 words, a 14% cut. Nothing was deleted from the site, only from the second and third place it already appeared.
