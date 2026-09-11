@@ -2,6 +2,12 @@
 
 One entry per release of www.whirleyworld.com. Newest first.
 
+## v2.3 · 11 September 2026 · IATA World Data Symposium
+
+- Adds the biggest speaking credential the site was missing: "From Experimentation to AI Adoption: Lessons from SWISS and Lufthansa Group", invited talk at the IATA World Data Symposium, Singapore, April 2026. Stills pulled from the talk recording.
+- Speaking gallery is now 2 x 2 and larger: two photos per event instead of a cramped three-across. Dropped the group photo, which was the only one not showing work.
+- Speaking intro now says Europe and Asia, which is true.
+
 ## v2.2 · 11 September 2026 · photo captions
 
 - The third speaking photo is from the same Frankfurt event as the other two, not a separate one. Captions now read as a sequence: opening the session, the group, then the packed room. Placeholder caption "Standing room only" is gone.

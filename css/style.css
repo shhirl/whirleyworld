@@ -478,7 +478,7 @@ p { margin: 0 0 1em; }
 /* ---------- 12b. SPEAKING ---------- */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   margin-bottom: 48px;
 }
@@ -522,7 +522,6 @@ p { margin: 0 0 1em; }
   .hero, .about, .step { grid-template-columns: 1fr; gap: 28px; }
   .portrait-wrap { max-width: 300px; }
   .cards, .three, .talks { grid-template-columns: 1fr; }
-  .gallery { grid-template-columns: repeat(2, 1fr); }
   .meta { grid-template-columns: repeat(2, 1fr); }
   .section { padding-block: 48px; }
   .step { padding-block: 40px; }
