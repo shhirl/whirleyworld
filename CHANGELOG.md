@@ -2,6 +2,13 @@
 
 One entry per release of www.whirleyworld.com. Newest first.
 
+## v2.4 · 11 September 2026 · speaking grouped by event
+
+- The four speaking photos are no longer a detached grid. Each event is now one block: title, venue, date and description on the left, its own two photos on the right, using the same two-column rhythm as the case study steps.
+- Per-photo captions dropped. The event block names the event once, so the captions were repeating it.
+- "The January Problem" moves to a closing line, since it is a talk on offer rather than one with photos.
+- Data science experience corrected from five years to seven.
+
 ## v2.3 · 11 September 2026 · IATA World Data Symposium
 
 - Adds the biggest speaking credential the site was missing: "From Experimentation to AI Adoption: Lessons from SWISS and Lufthansa Group", invited talk at the IATA World Data Symposium, Singapore, April 2026. Stills pulled from the talk recording.

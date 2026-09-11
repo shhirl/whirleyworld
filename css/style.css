@@ -476,14 +476,33 @@ p { margin: 0 0 1em; }
 
 
 /* ---------- 12b. SPEAKING ---------- */
-.gallery {
+.events { margin-top: 8px; }
+.event {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 48px;
+  padding-block: 56px;
+  border-top: 1.5px solid var(--ink);
+}
+.event-info h3 { margin: 0 0 8px; font-size: 1.8rem; }
+.event-info p { margin: 0 0 14px; color: var(--muted); }
+.event-info p:last-child { margin-bottom: 0; }
+.event-meta {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink) !important;
+  margin-bottom: 10px !important;
+}
+.event-venue { font-weight: 500; color: var(--ink) !important; }
+.event-shots {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  margin-bottom: 48px;
+  gap: 20px;
+  align-content: start;
 }
-.shot { margin: 0; }
-.shot img {
+.event-shots img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
@@ -491,37 +510,17 @@ p { margin: 0 0 1em; }
   border: 1.5px solid var(--ink);
   display: block;
 }
-.shot figcaption {
-  margin-top: 12px;
-  font-size: 0.95rem;
-  color: var(--muted);
-}
-.talks {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-}
-.talk {
-  border-top: 1.5px solid var(--ink);
-  padding-top: 20px;
-}
-.talk h3 { margin: 0 0 10px; font-size: 1.5rem; }
-.talk p { margin: 0; color: var(--muted); }
-.talk-meta {
-  margin-top: 12px !important;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--ink) !important;
-}
-.talks-label { margin-top: 48px; }
+.event:has(.event-info:only-child) { grid-template-columns: 1fr; }
+.talks-label { margin-top: 56px; }
+.also { margin-top: 24px; color: var(--muted); max-width: 60ch; }
+.also strong { color: var(--ink); }
 
 /* ---------- 16. MOBILE ---------- */
 @media (max-width: 900px) {
   .hero, .about, .step { grid-template-columns: 1fr; gap: 28px; }
   .portrait-wrap { max-width: 300px; }
-  .cards, .three, .talks { grid-template-columns: 1fr; }
+  .cards, .three { grid-template-columns: 1fr; }
+  .event { grid-template-columns: 1fr; gap: 28px; padding-block: 40px; }
   .meta { grid-template-columns: repeat(2, 1fr); }
   .section { padding-block: 48px; }
   .step { padding-block: 40px; }
@@ -531,5 +530,5 @@ p { margin: 0 0 1em; }
   .nav-links a:not(.btn) { display: none; }
   .sticker { left: 12px; }
   .strip { padding: 24px; }
-  .stats, .gallery { grid-template-columns: 1fr; }
+  .stats, .event-shots { grid-template-columns: 1fr; }
 }
