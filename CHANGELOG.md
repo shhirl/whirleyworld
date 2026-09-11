@@ -2,6 +2,10 @@
 
 One entry per release of www.whirleyworld.com. Newest first.
 
+## v2.2 · 11 September 2026 · photo captions
+
+- The third speaking photo is from the same Frankfurt event as the other two, not a separate one. Captions now read as a sequence: opening the session, the group, then the packed room. Placeholder caption "Standing room only" is gone.
+
 ## v2.1 · 11 September 2026 · credentials and speaking
 
 Adds the evidence v2 dropped, and a speaking section.
