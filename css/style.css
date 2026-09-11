@@ -360,6 +360,16 @@ p { margin: 0 0 1em; }
 .strip > div { flex: 1 1 420px; }
 .strip h3 { font-size: 1.6rem; }
 .strip p { margin: 6px 0 0; color: var(--muted); }
+.strip-image {
+  flex: 0 1 380px;
+  width: 380px;
+  max-width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--ink);
+  display: block;
+}
 
 
 /* ---------- 13. CONTACT ---------- */
