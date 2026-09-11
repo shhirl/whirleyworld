@@ -2,6 +2,16 @@
 
 One entry per release of www.whirleyworld.com. Newest first.
 
+## v2.6 · 11 September 2026 · real screenshots
+
+- The three public projects now use real screenshots instead of SVG illustrations. The site argues from receipts, and a screenshot is one; an abstract illustration is not.
+- Each project uses two crops: the product on the homepage card, the evidence on the case study.
+  - ragpatterns: the seven patterns scored side by side / the nine-question set with what each is expected to separate.
+  - Make My Gate: the planner with a real D33 to A63 query / the airport as a graph, 22 places and 27 walks.
+  - fixmybanana: the upload page with good form against banana back.
+- The airline case study keeps its illustration. It stays anonymised.
+- Removed `images/ragpatterns.svg`, `images/makemygate.svg`, `images/fixmybanana.svg`.
+
 ## v2.5 · 11 September 2026 · smaller speaking photos
 
 - Speaking photos are about 12% smaller on desktop (291px instead of 330px), by narrowing the photo column from 1.6fr to 1.2fr. The text column takes the space.
