@@ -2,9 +2,9 @@
 
 One entry per release of www.whirleyworld.com. Newest first.
 
-## v2.7 · 11 September 2026 · remove wrong TikTok link
+## v2.7 · 11 September 2026 · fix wrong TikTok link
 
-- The footer TikTok link pointed at tiktok.com/@shhirl, which is not Shirley's account. Removed rather than guessed. LinkedIn and GitHub are unchanged and correct.
+- The footer TikTok link pointed at tiktok.com/@shhirl, which is somebody else's account. Corrected to tiktok.com/@shhirl0. LinkedIn and GitHub are unchanged and correct.
 
 ## v2.6 · 11 September 2026 · real screenshots
 
