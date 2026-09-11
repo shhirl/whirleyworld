@@ -479,7 +479,8 @@ p { margin: 0 0 1em; }
 .events { margin-top: 8px; }
 .event {
   display: grid;
-  grid-template-columns: 1fr 1.6fr;
+  /* Second number sizes the photos. Lower it to shrink them. */
+  grid-template-columns: 1fr 1.2fr;
   gap: 48px;
   padding-block: 56px;
   border-top: 1.5px solid var(--ink);
@@ -521,6 +522,7 @@ p { margin: 0 0 1em; }
   .portrait-wrap { max-width: 300px; }
   .cards, .three { grid-template-columns: 1fr; }
   .event { grid-template-columns: 1fr; gap: 28px; padding-block: 40px; }
+  .event-shots { max-width: 620px; }
   .meta { grid-template-columns: repeat(2, 1fr); }
   .section { padding-block: 48px; }
   .step { padding-block: 40px; }

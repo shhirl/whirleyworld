@@ -2,6 +2,11 @@
 
 One entry per release of www.whirleyworld.com. Newest first.
 
+## v2.5 · 11 September 2026 · smaller speaking photos
+
+- Speaking photos are about 12% smaller on desktop (291px instead of 330px), by narrowing the photo column from 1.6fr to 1.2fr. The text column takes the space.
+- When the block stacks below 900px the pair is now capped at 620px, so tablet photos no longer come out larger than desktop ones.
+
 ## v2.4 · 11 September 2026 · speaking grouped by event
 
 - The four speaking photos are no longer a detached grid. Each event is now one block: title, venue, date and description on the left, its own two photos on the right, using the same two-column rhythm as the case study steps.
